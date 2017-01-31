@@ -1,0 +1,14 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemone server/app.js"
+  },
+  "author": "Casey Hyde",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}
