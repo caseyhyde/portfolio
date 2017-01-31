@@ -3,6 +3,10 @@ app.controller('landingController', function() {
 
   const SELF = this;
 
+  $(document).ready(function() {
+    console.log("Jquery working! Document ready!");
+    $('.tlt').textillate();
+  });
 
 
 
