@@ -4,11 +4,14 @@
   "description": "Portfolio website",
   "main": "app.js",
   "scripts": {
-    "test": "nodemone server/app.js"
+    "test": "nodemon server/app.js",
+    "start": "node server/app.js"
   },
   "author": "Casey Hyde",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.14.1"
+    "body-parser": "^1.16.0",
+    "express": "^4.14.1",
+    "path": "^0.12.7"
   }
 }
