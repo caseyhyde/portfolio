@@ -11,11 +11,3 @@ app.config(['$routeProvider', function($routeProvider) {
       redirectTo: '/landing'
     })
 }]);//End router
-
-
-$(document).ready(function() {
-  console.log("Jquery working! Document ready!");
-  $(function() {
-    $('.tlt').textillate();
-  });
-});
