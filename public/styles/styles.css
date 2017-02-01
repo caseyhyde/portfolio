@@ -4,6 +4,10 @@ body {
   color: white;
   font-family: 'Amatic SC', cursive;
 }
+
+header img {
+  height: 5vw;
+}
 #welcome {
   text-align: center;
   visibility: hidden;
@@ -53,11 +57,15 @@ li {
 
 #likes {
   text-align: center;
-  width: 35%;
+  width: 38%;
   height: 400px;
   margin: auto;
   overflow: hidden;
   font-size: 2vw;
+}
+
+#iLike {
+  font-size: 3.25vw;
 }
 
 ul{

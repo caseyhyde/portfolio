@@ -1,9 +1,12 @@
-app.controller('landingController', function() {
+app.controller('landingController', ['$location', function($location) {
   console.log("Landing controller is running\n\n");
 
   const SELF = this;
 
-  $(document).ready(function() {
+  // $location.path('/hello');
+
+
+  angular.element(document).ready(function() {
     console.log("Jquery working! Document ready!");
 
     $('#welcomeHi').textillate({
@@ -35,15 +38,23 @@ app.controller('landingController', function() {
     });
 
     $('#iLike').textillate({
-      initialDelay: 2000,
+      selector: 'statement',
+      initialDelay: 1700,
       autoStart: true,
-      loop: false,
+      loop: true,
+      minDisplayTime: 13850,
       in: {
-        effect: 'flipIn',
+        effect: 'flipInY',
         delayScale: 1,
-        delay: 75,
+        delay: 35,
         sync: false,
-        shuffle: false
+        shuffle: false,
+      },
+      out: {
+        effect: 'fadeOutDownBig',
+        shuffle: false,
+        delayScale: 1,
+        delay: 50
       },
       type: 'char'
     });
@@ -52,7 +63,7 @@ app.controller('landingController', function() {
       selector: 'texts',
       initialDelay: 2500,
       autoStart: true,
-      loop: true,
+      loop: false,
       minDisplayTime: 800,
       in: {
         effect: 'flipInY',
@@ -70,10 +81,20 @@ app.controller('landingController', function() {
       type: 'char'
     });
 
+    $('#iLike').on('outAnimationEnd.tlt', function() {
+      console.log("Out animation ended");
+      changeRoute();
+    })
+
 
 
   });
 
+  function changeRoute() {
+    console.log("change route ran");
+    console.log("Location: ", $location);
+    $location.path('/hello');
+  }
 
 
-});//End controller
+}]);//End controller

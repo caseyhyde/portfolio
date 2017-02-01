@@ -7,6 +7,11 @@ app.config(['$routeProvider', function($routeProvider) {
       controller: 'landingController',
       controllerAs: 'landing'
     })
+    .when('/hello', {
+      templateUrl: '/views/templates/hello.html',
+      controller: 'helloController',
+      controllerAs: 'hello'
+    })
     .otherwise({
       redirectTo: '/landing'
     })
