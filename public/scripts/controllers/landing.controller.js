@@ -67,91 +67,40 @@ app.controller('landingController', ['$location', '$scope', function($location, 
         sync: false,
         shuffle: false,
       },
-      // out: {
-      //   effect: 'fadeOutDownBig',
-      //   shuffle: false,
-      //   delayScale: 1,
-      //   delay: 50
-      // },
+      out: {
+        effect: 'fadeOutDownBig',
+        shuffle: false,
+        delayScale: 1,
+        delay: 20
+      },
       type: 'char'
     });
-
-    // $('#iLike').textillate({
-    //   selector: '.message',
-    //   initialDelay: 2000,
-    //   autoStart: true,
-    //   loop: false,
-    //   minDisplayTime: 13000,
-    //   in: {
-    //     effect: 'flipInY',
-    //     delayScale: 1,
-    //     delay: 35,
-    //     sync: false,
-    //     shuffle: false,
-    //   },
-    //   // out: {
-    //   //   effect: 'fadeOutDownBig',
-    //   //   shuffle: false,
-    //   //   delayScale: 1,
-    //   //   delay: 50
-    //   // },
-    //   type: 'char'
-    // });
-
-    // $('#goods').textillate({
-    //   selector: '.things',
-    //   initialDelay: 2500,
-    //   autoStart: true,
-    //   loop: false,
-    //   minDisplayTime: 800,
-    //   in: {
-    //     effect: 'flipInY',
-    //     delayScale: 1,
-    //     delay: 20,
-    //     sync: false,
-    //     shuffle: false,
-    //   },
-    //   // out: {
-    //   //   effect: 'fadeOutDownBig',
-    //   //   shuffle: false,
-    //   //   delayScale: 1,
-    //   //   delay: 50
-    //   // },
-    //   type: 'char'
-    // });
-
-    // $('#likes').textillate({
-    //   selector: '.things',
-    //   initialDelay: 2500,
-    //   autoStart: true,
-    //   loop: false,
-    //   minDisplayTime: 800,
-    //   in: {
-    //     effect: 'flipInY',
-    //     delayScale: 1,
-    //     delay: 20,
-    //     sync: false,
-    //     shuffle: false,
-    //   },
-    //   // out: {
-    //   //   effect: 'fadeOutDownBig',
-    //   //   shuffle: false,
-    //   //   delayScale: 1,
-    //   //   delay: 50
-    //   // },
-    //   type: 'char'
-    // });
-
 
     //When "I'm good at" message finishes loading, load list of "goods":
     $('#iGood').on('inAnimationEnd.tlt', function() {
       console.log("iGood inAnimationEnd");
+      $('#goods').textillate({
+        loop: false,
+        in: {
+          delayScale: 1,
+          delay: 30
+        },
+        out: {
+          delayScale: 1,
+          delay: 10
+        }
+      });
       $('#goods').textillate('in');
     });
     //When "goods" finishes loading, wait, then start removing goods:
     $('#goods').on('inAnimationEnd.tlt', function() {
       console.log("goods inAnimationEnd");
-      $('#goods').textillate('out');
+
+      setTimeout(goodsOut, 2000);
+
+      function goodsOut() {
+        $('#goods').textillate('out');
+      }
     });
     //When "goods" have been removed, remove "I'm good at message":
     $('#goods').on('outAnimationEnd.tlt', function() {
@@ -164,17 +113,43 @@ app.controller('landingController', ['$location', '$scope', function($location, 
       self.likes = true;
       $scope.$apply();
       console.log("iGood outAnimationEnd");
+      $('#iLike').textillate({
+        loop: false,
+        in: {
+          delayScale: 1,
+          delay: 35
+        },
+        out: {
+          delayScale: 1,
+          delay: 20
+        }
+      });
       $('#iLike').textillate('in');
     });
+
     //When "I like these" message has been loaded, load "likes":
     $('#iLike').on('inAnimationEnd.tlt', function() {
       console.log("iLike inAnimationEnd");
+      $('#likes').textillate({
+        loop: false,
+        in: {
+          delayScale: 1,
+          delay: 30
+        },
+        out: {
+          delayScale: 1,
+          delay: 10
+        }
+      });
       $('#likes').textillate('in');
     });
     //When "likes" have been loaded, wait, then remove "likes":
     $('#likes').on('inAnimationEnd.tlt', function() {
       console.log("likes inAnimationEnd");
-      $('#likes').textillate('out');
+      setTimeout(likesOut, 2000);
+      function likesOut() {
+        $('#likes').textillate('out');
+      }
     });
     //When "likes" have been removed, wait, then remove "I like these:" message:
     $('#likes').on('outAnimationEnd.tlt', function() {
