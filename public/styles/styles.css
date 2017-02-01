@@ -1,7 +1,69 @@
+body {
+  height: 100%;
+  background-color: #141414;
+  color: white;
+  font-family: 'Amatic SC', cursive;
+}
 #welcome {
   text-align: center;
+  visibility: hidden;
+}
+
+#welcome h1 {
+  font-size: 7vw;
+}
+
+#welcome h3 {
+  font-size: 4.5vw;
+}
+
+#welcome h5 {
+  font-size: 3.25vw;
+}
+
+#welcome p {
+  font-size: 3vw;
+}
+
+#welcomeHi {
+  margin-bottom: 0px;
+}
+
+#welcomeName {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#iLike {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 footer {
   text-align: center;
+}
+
+.test li {
+  font-size: 50px;
+}
+
+li {
+  list-style: none;
+}
+
+#likes {
+  text-align: center;
+  width: 35%;
+  height: 400px;
+  margin: auto;
+  overflow: hidden;
+  font-size: 2vw;
+}
+
+ul{
+  margin-left: 200px;
+  margin-right: 200px;
+  border-left: 200px;
+  border-right: 200px;
+  overflow: hidden;
 }
