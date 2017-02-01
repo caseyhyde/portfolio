@@ -4,20 +4,22 @@ body {
   color: white;
   font-family: 'Amatic SC', cursive;
 }
+
+header img {
+  height: 5vw;
+}
 #welcome {
   text-align: center;
   visibility: hidden;
 }
 
-#welcome h1 {
-  font-size: 7vw;
-}
-
-#welcome h3 {
+#welcomeName {
   font-size: 4.5vw;
+  width: 60%;
+  margin: auto;
 }
 
-#welcome h5 {
+#welcome {
   font-size: 3.25vw;
 }
 
@@ -27,11 +29,17 @@ body {
 
 #welcomeHi {
   margin-bottom: 0px;
+  font-size: 7vw;
+  width: 60%;
+  margin: auto;
 }
 
 #welcomeName {
+  margin: auto;
   margin-top: 0px;
   margin-bottom: 0px;
+  font-size: 4.5vw;
+  width: 60%;
 }
 
 #iLike {
@@ -53,11 +61,15 @@ li {
 
 #likes {
   text-align: center;
-  width: 35%;
+  width: 60%;
   height: 400px;
   margin: auto;
   overflow: hidden;
   font-size: 2vw;
+}
+
+#iLike {
+  font-size: 3.25vw;
 }
 
 ul{

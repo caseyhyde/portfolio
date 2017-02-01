@@ -1,49 +1,73 @@
-app.controller('landingController', function() {
+app.controller('landingController', ['$location', '$scope', function($location, $scope) {
   console.log("Landing controller is running\n\n");
 
-  const SELF = this;
+  const self = this;
 
-  $(document).ready(function() {
+  angular.element(document).ready(function() {
     console.log("Jquery working! Document ready!");
 
     $('#welcomeHi').textillate({
-      initialDelay: 400,
+      selector: 'hi',
+      initialDelay: 200,
       autoStart: true,
       loop: true,
+      minDisplayTime: 18000,
       in: {
-        effect: 'flipIn',
+        effect: 'rotateInDownRight',
         delayScale: 1,
         delay: 250,
         sync: false,
-        shuffle: false
+        shuffle: false,
+      },
+      out: {
+        effect: 'fadeOutDownBig',
+        shuffle: false,
+        delayScale: 1,
+        delay: 50
       },
       type: 'char'
     });
 
     $('#welcomeName').textillate({
-      initialDelay: 1000,
+      selector: 'name',
+      initialDelay: 1350,
       autoStart: true,
-      loop: false,
+      loop: true,
+      minDisplayTime: 11500,
       in: {
-        effect: 'flipIn',
+        effect: 'rollIn',
         delayScale: 1,
-        delay: 75,
+        delay: 50,
         sync: false,
-        shuffle: false
+        shuffle: false,
+      },
+      out: {
+        effect: 'fadeOutDownBig',
+        shuffle: false,
+        delayScale: 1,
+        delay: 50
       },
       type: 'char'
     });
 
     $('#iLike').textillate({
-      initialDelay: 2000,
+      selector: 'statement',
+      initialDelay: 2500,
       autoStart: true,
-      loop: false,
+      loop: true,
+      minDisplayTime: 13850,
       in: {
-        effect: 'flipIn',
+        effect: 'flipInY',
         delayScale: 1,
-        delay: 75,
+        delay: 35,
         sync: false,
-        shuffle: false
+        shuffle: false,
+      },
+      out: {
+        effect: 'fadeOutDownBig',
+        shuffle: false,
+        delayScale: 1,
+        delay: 50
       },
       type: 'char'
     });
@@ -57,7 +81,7 @@ app.controller('landingController', function() {
       in: {
         effect: 'flipInY',
         delayScale: 1,
-        delay: 25,
+        delay: 20,
         sync: false,
         shuffle: false,
       },
@@ -70,10 +94,12 @@ app.controller('landingController', function() {
       type: 'char'
     });
 
-
+    $('#iLike').on('outAnimationEnd.tlt', function() {
+      // $location.path('/hello');
+      // $scope.$apply();
+    })
 
   });
 
 
-
-});//End controller
+}]);//End controller
