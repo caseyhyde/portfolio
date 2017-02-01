@@ -8,7 +8,7 @@ body {
 header img {
   height: 5vw;
 }
-#welcome {
+#welcome, #hi {
   text-align: center;
   visibility: hidden;
 }
@@ -51,15 +51,11 @@ footer {
   text-align: center;
 }
 
-.test li {
-  font-size: 50px;
-}
-
 li {
   list-style: none;
 }
 
-#likes {
+#likes, #goods {
   text-align: center;
   width: 60%;
   height: 400px;
