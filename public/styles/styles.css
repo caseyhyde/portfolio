@@ -25,6 +25,20 @@ body {
   font-size: 3vw;
 }
 
+#welcomeHi {
+  margin-bottom: 0px;
+}
+
+#welcomeName {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#iLike {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 footer {
   text-align: center;
 }
@@ -43,6 +57,7 @@ li {
   height: 400px;
   margin: auto;
   overflow: hidden;
+  font-size: 2vw;
 }
 
 ul{
