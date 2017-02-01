@@ -1,45 +1,58 @@
-app.controller('landingController', ['$location', function($location) {
+app.controller('landingController', ['$location', '$scope', function($location, $scope) {
   console.log("Landing controller is running\n\n");
 
-  const SELF = this;
-
-  // $location.path('/hello');
-
+  const self = this;
 
   angular.element(document).ready(function() {
     console.log("Jquery working! Document ready!");
 
     $('#welcomeHi').textillate({
-      initialDelay: 400,
+      selector: 'hi',
+      initialDelay: 200,
       autoStart: true,
       loop: true,
+      minDisplayTime: 18000,
       in: {
-        effect: 'flipIn',
+        effect: 'rotateInDownRight',
         delayScale: 1,
         delay: 250,
         sync: false,
-        shuffle: false
+        shuffle: false,
+      },
+      out: {
+        effect: 'fadeOutDownBig',
+        shuffle: false,
+        delayScale: 1,
+        delay: 50
       },
       type: 'char'
     });
 
     $('#welcomeName').textillate({
-      initialDelay: 1000,
+      selector: 'name',
+      initialDelay: 1350,
       autoStart: true,
-      loop: false,
+      loop: true,
+      minDisplayTime: 11500,
       in: {
-        effect: 'flipIn',
+        effect: 'rollIn',
         delayScale: 1,
-        delay: 75,
+        delay: 50,
         sync: false,
-        shuffle: false
+        shuffle: false,
+      },
+      out: {
+        effect: 'fadeOutDownBig',
+        shuffle: false,
+        delayScale: 1,
+        delay: 50
       },
       type: 'char'
     });
 
     $('#iLike').textillate({
       selector: 'statement',
-      initialDelay: 1700,
+      initialDelay: 2500,
       autoStart: true,
       loop: true,
       minDisplayTime: 13850,
@@ -63,12 +76,12 @@ app.controller('landingController', ['$location', function($location) {
       selector: 'texts',
       initialDelay: 2500,
       autoStart: true,
-      loop: false,
+      loop: true,
       minDisplayTime: 800,
       in: {
         effect: 'flipInY',
         delayScale: 1,
-        delay: 25,
+        delay: 20,
         sync: false,
         shuffle: false,
       },
@@ -82,19 +95,11 @@ app.controller('landingController', ['$location', function($location) {
     });
 
     $('#iLike').on('outAnimationEnd.tlt', function() {
-      console.log("Out animation ended");
-      changeRoute();
+      // $location.path('/hello');
+      // $scope.$apply();
     })
 
-
-
   });
-
-  function changeRoute() {
-    console.log("change route ran");
-    console.log("Location: ", $location);
-    $location.path('/hello');
-  }
 
 
 }]);//End controller
