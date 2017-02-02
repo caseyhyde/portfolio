@@ -1,3 +1,6 @@
+/***************************
+          GENERAL
+****************************/
 body {
   height: 100%;
   /*max-height: 500px;
@@ -7,10 +10,9 @@ body {
   color: #fefae8;
   font-family: 'Amatic SC', cursive;
 }
-
-header img {
-  height: 5vw;
-}
+/****************************
+          LANDING
+*****************************/
 #welcome, #hi {
   text-align: center;
   visibility: hidden;
@@ -97,6 +99,14 @@ ul{
   border-right: 200px;
   overflow: hidden;
 }
+/**********************************
+               LIFE
+***********************************/
+#life {
+
+}
+
+
 
 /**********************************
              ANIMATIONS
