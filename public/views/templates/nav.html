@@ -1,4 +1,27 @@
 <div id="potato">
-  <!-- <img src="/assets/potato.svg" alt=""> -->
+  <img class="navImg" src="/assets/potato.svg" alt="" ng-if="nav.show">
 </div>
+<div id="tabs">
+  <div class="tab" ng-if="nav.show" ng-class="{ 'highlighted' : nav.highlighted === 'life' }">
+    <span>Life</span>
+  </div>
+  <div class="tab" ng-if="nav.show" ng-class="{ 'highlighted' : nav.highlighted === 'projects' }">
+    <span>Projects</span>
+  </div>
+  <div class="tab" ng-if="nav.show" ng-class="{ 'highlighted' : nav.highlighted === 'bio' }">
+    <span>Bio</span>
+  </div>
+  <div class="tab" ng-if="nav.show" ng-class="{ 'highlighted' : nav.highlighted === 'resume' }">
+    <span>Resume</span>
+  </div>
+  <div class="tab" ng-if="nav.show" ng-class="{ 'highlighted' : nav.highlighted === 'contact' }">
+    <span>Contact</span>
+  </div>
+</div>
+
+<!-- <div id="hamburger" class="navImg" ng-if="nav.show" ng-click="nav.toggleHamburger()" ng-class="{ 'open' : nav.hamburgerOpen }">
+  <span></span>
+  <span></span>
+  <span></span>
+</div> -->
 <!-- <div>Icons made by <a href="http://www.flaticon.com/authors/madebyoliver" title="Madebyoliver">Madebyoliver</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
