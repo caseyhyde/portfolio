@@ -4,12 +4,16 @@ app.controller('landingController', ['$location', '$scope', function($location, 
   const self = this;
   self.goods = true;
   self.likes = false;
+  self.potato = false;
+  self.clickMessage = false;
+
+  self.potatoClick = function() {
+    $location.path('/hello');
+  }
 
   angular.element(document).ready(function() {
     console.log("Jquery working! Document ready!");
-
-
-
+    //Animate "Hi!"
     $('#welcomeHi').textillate({
       selector: '.hi',
       initialDelay: 200,
@@ -19,9 +23,14 @@ app.controller('landingController', ['$location', '$scope', function($location, 
       in: {
         effect: 'rotateInDownRight',
         delayScale: 1,
-        delay: 250,
+        delay: 200,
         sync: false,
-        shuffle: false
+        shuffle: false,
+        callback: function() {
+          self.potato = true;
+          // self.potatoClick = true;
+          $scope.$apply();
+        }
       },
       out: {
         effect: 'fadeOutDownBig',
@@ -31,10 +40,10 @@ app.controller('landingController', ['$location', '$scope', function($location, 
       },
       type: 'char'
     });
-
+    //Animate "My name is"
     $('#welcomeName').textillate({
       selector: '.name',
-      initialDelay: 1000,
+      initialDelay: 1600,
       autoStart: true,
       loop: false,
       minDisplayTime: 11500,
@@ -53,10 +62,10 @@ app.controller('landingController', ['$location', '$scope', function($location, 
       },
       type: 'char'
     });
-
+    //Animate "I'm good at"
     $('#iGood').textillate({
       selector: '.message',
-      initialDelay: 2000,
+      initialDelay: 2500,
       autoStart: true,
       loop: false,
       minDisplayTime: 13000,
@@ -83,7 +92,8 @@ app.controller('landingController', ['$location', '$scope', function($location, 
         loop: false,
         in: {
           delayScale: 1,
-          delay: 30
+          delay: 30,
+          effect: 'fadeInUpBig'
         },
         out: {
           delayScale: 1,
@@ -95,9 +105,7 @@ app.controller('landingController', ['$location', '$scope', function($location, 
     //When "goods" finishes loading, wait, then start removing goods:
     $('#goods').on('inAnimationEnd.tlt', function() {
       console.log("goods inAnimationEnd");
-
-      setTimeout(goodsOut, 3000);
-
+      setTimeout(goodsOut, 2500);
       function goodsOut() {
         $('#goods').textillate('out');
       }
@@ -126,7 +134,6 @@ app.controller('landingController', ['$location', '$scope', function($location, 
       });
       $('#iLike').textillate('in');
     });
-
     //When "I like these" message has been loaded, load "likes":
     $('#iLike').on('inAnimationEnd.tlt', function() {
       console.log("iLike inAnimationEnd");
@@ -134,7 +141,8 @@ app.controller('landingController', ['$location', '$scope', function($location, 
         loop: false,
         in: {
           delayScale: 1,
-          delay: 30
+          delay: 30,
+          effect: 'fadeInUpBig'
         },
         out: {
           delayScale: 1,
@@ -160,12 +168,12 @@ app.controller('landingController', ['$location', '$scope', function($location, 
     $('#iLike').on('outAnimationEnd.tlt', function() {
       self.goods = true;
       self.likes = false;
+      self.clickMessage = true;
       $scope.$apply()
       console.log("iLike outAnimationEnd");
       $('#iGood').textillate('in');
     })
-
-  });
+  });//End document.ready
 
 
 }]);//End controller

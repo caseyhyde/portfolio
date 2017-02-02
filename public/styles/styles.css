@@ -3,7 +3,8 @@ body {
   /*max-height: 500px;
   overflow: hidden;*/
   background-color: #141414;
-  color: white;
+  /*background-color: white;*/
+  color: #fefae8;
   font-family: 'Amatic SC', cursive;
 }
 
@@ -15,6 +16,23 @@ header img {
   visibility: hidden;
 }
 
+#welcome img {
+  visibility: visible;
+  max-width: 20%;
+  max-height: 20%;
+  display: inline-block;
+  margin-bottom: -3.5%;
+}
+
+#clickTip {
+  visibility: visible;
+  position: absolute;
+  right: 30%;
+  top: 40%;
+  /*right: 20%;*/
+  z-index: 1000;
+}
+
 #welcomeName {
   font-size: 4.5vw;
   width: 60%;
@@ -22,6 +40,7 @@ header img {
 }
 
 #welcome {
+  margin-top: 15%;
   font-size: 3.25vw;
   overflow: hidden;
 }
@@ -61,7 +80,7 @@ li {
 #likes, #goods {
   text-align: center;
   width: 60%;
-  height: 400px;
+  height: 200px;
   margin: auto;
   overflow: hidden;
   font-size: 2vw;
@@ -77,4 +96,34 @@ ul{
   border-left: 200px;
   border-right: 200px;
   overflow: hidden;
+}
+
+/**********************************
+             ANIMATIONS
+***********************************/
+
+@keyframes viewOut {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(90deg);
+  }
+}
+
+@keyframes viewIn {
+  from {
+    transform: rotateY(270deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.main.ng-enter {
+  animation: viewIn 2s both ease-in;
+}
+
+.main.ng-leave {
+  animation: viewOut 2s both ease-in;
 }
