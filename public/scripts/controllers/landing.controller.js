@@ -8,7 +8,7 @@ app.controller('landingController', ['$location', '$scope', function($location, 
   self.clickMessage = false;
 
   self.potatoClick = function() {
-    $location.path('/hello');
+    $location.path('/life');
   }
 
   angular.element(document).ready(function() {
