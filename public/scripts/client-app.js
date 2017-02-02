@@ -1,4 +1,4 @@
-var app = angular.module('portfolioApp', ['ngRoute', 'ngAnimate']);
+var app = angular.module('portfolioApp', ['ngRoute', 'ngAnimate', 'angularModalService']);
 
 app.config(['$routeProvider',
 '$locationProvider', function($routeProvider, $locationProvider) {
@@ -9,10 +9,10 @@ app.config(['$routeProvider',
       controller: 'landingController',
       controllerAs: 'landing'
     })
-    .when('/hello', {
-      templateUrl: '/views/templates/hello.html',
-      controller: 'helloController',
-      controllerAs: 'hello'
+    .when('/life', {
+      templateUrl: '/views/templates/life.html',
+      controller: 'lifeController',
+      controllerAs: 'life'
     })
     .otherwise({
       redirectTo: '/landing'

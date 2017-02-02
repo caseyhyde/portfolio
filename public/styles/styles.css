@@ -1,18 +1,38 @@
+/***************************
+          GENERAL
+****************************/
 body {
   height: 100%;
   /*max-height: 500px;
   overflow: hidden;*/
   background-color: #141414;
-  color: white;
+  /*background-color: white;*/
+  color: #fefae8;
   font-family: 'Amatic SC', cursive;
 }
-
-header img {
-  height: 5vw;
-}
+/****************************
+          LANDING
+*****************************/
 #welcome, #hi {
   text-align: center;
   visibility: hidden;
+}
+
+#welcome img {
+  visibility: visible;
+  max-width: 20%;
+  max-height: 20%;
+  display: inline-block;
+  margin-bottom: -3.5%;
+}
+
+#clickTip {
+  visibility: visible;
+  position: absolute;
+  right: 30%;
+  top: 40%;
+  /*right: 20%;*/
+  z-index: 1000;
 }
 
 #welcomeName {
@@ -22,6 +42,7 @@ header img {
 }
 
 #welcome {
+  margin-top: 15%;
   font-size: 3.25vw;
   overflow: hidden;
 }
@@ -61,7 +82,7 @@ li {
 #likes, #goods {
   text-align: center;
   width: 60%;
-  height: 400px;
+  height: 200px;
   margin: auto;
   overflow: hidden;
   font-size: 2vw;
@@ -77,4 +98,75 @@ ul{
   border-left: 200px;
   border-right: 200px;
   overflow: hidden;
+}
+/**********************************
+               LIFE
+***********************************/
+#life {
+  margin: 10% 20% 10% 20%;
+  text-align: center;
+}
+
+#life h1 {
+  font-size: 5vw;
+  margin-bottom: 1%;
+}
+
+#life h4 {
+  font-size: 3vw;
+  margin-top: 1%;
+}
+
+#life img {
+  width: 20vw;
+}
+
+#lifeButtons {
+  width: inherit;
+  text-align: center;
+}
+
+#help {
+  float: left;
+  position: relative;
+  left: 40%;
+}
+
+#start {
+  float: right;
+  position: relative;
+  right: 40%;
+}
+
+
+
+/**********************************
+             ANIMATIONS
+***********************************/
+
+@keyframes viewOut {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(90deg);
+  }
+}
+
+@keyframes viewIn {
+  from {
+    transform: rotateY(270deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.main.ng-enter {
+  animation: viewIn 1.5s both ease-in;
+  animation-delay: 1.5s;
+}
+
+.main.ng-leave {
+  animation: viewOut 1.5s both ease-in;
 }
