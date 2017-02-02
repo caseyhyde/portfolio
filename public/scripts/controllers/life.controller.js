@@ -1,5 +1,5 @@
-app.controller('lifeController', ['$location', function($location) {
-  console.log("Hello controller is running");
+app.controller('lifeController', ['$location', 'ModalService', function($location, ModalService) {
+  console.log("Life controller is running");
 
   const self = this;
 
@@ -7,15 +7,11 @@ app.controller('lifeController', ['$location', function($location) {
     $location.path('/landing');
   };
 
-  // self.help = function(ev, index) {
-  //   $mdDialog.show({
-  //     template:
-  //       '<div>' +
-  //         '<h1>Hello World</h1>' +
-  //       '</div>',
-  //     targetEvent: ev,
-  //     clickOutsideToClose: true
-  //   })
-  // };
+  self.help = function() {
+    ModalService.showModal({
+      template: '<h1>Hello World</h1>',
+      controller: 'lifeController'
+    })
+  };
 
 }]);//End controller
