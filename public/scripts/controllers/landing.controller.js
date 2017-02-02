@@ -1,4 +1,4 @@
-app.controller('landingController', ['$location', '$scope', function($location, $scope) {
+app.controller('landingController', ['$location', '$scope', 'NavFactory', function($location, $scope, NavFactory) {
   console.log("Landing controller is running\n\n");
 
   const self = this;
