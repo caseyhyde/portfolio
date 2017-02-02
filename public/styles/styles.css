@@ -7,9 +7,128 @@ body {
   overflow: hidden;*/
   background-color: #141414;
   /*background-color: white;*/
-  color: #fefae8;
+  color: #c3c3c3;
   font-family: 'Amatic SC', cursive;
 }
+/****************************
+            NAV
+*****************************/
+header {
+  /*position: absolute;*/
+  position: fixed;
+  width: 100%;
+  top: 3%;
+}
+
+#potato {
+  width: 15%;
+  float: left;
+}
+
+.navImg {
+  width: 5vw;
+  margin-left: 10%;
+}
+#tabs {
+  text-align: center;
+}
+
+.highlighted {
+  color: #713a16;
+}
+
+.tab {
+  display: inline-block;
+  font-size: 4vw;
+  margin-right: 9%;
+}
+/**********************************
+Credit to Jesse Couch
+for this hamburger menu
+https://codepen.io/designcouch/
+***********************************/
+#hamburger {
+  width: 60px;
+  height: 45px;
+  float: right;
+  margin-right: 2%;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#hamburger span {
+  display: block;
+  position: absolute;
+  height: 8px;
+  width: 100%;
+  background: #525252;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#hamburger span:nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#hamburger span:nth-child(2) {
+  top: 16px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#hamburger span:nth-child(3) {
+  top: 32px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#hamburger.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -3px;
+  left: 8px;
+}
+
+#hamburger.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+#hamburger.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 39px;
+  left: 8px;
+}
+
 /****************************
           LANDING
 *****************************/
@@ -103,10 +222,53 @@ ul{
                LIFE
 ***********************************/
 #life {
-
+  margin: 10% 20% 10% 20%;
+  text-align: center;
 }
 
+#life h1 {
+  font-size: 5vw;
+  margin-bottom: 1%;
+}
 
+#life h4 {
+  font-size: 3vw;
+  margin-top: 1%;
+}
+
+#life img {
+  width: 20vw;
+}
+
+#lifeButtons {
+  width: inherit;
+  text-align: center;
+}
+
+#help {
+  float: left;
+  position: relative;
+  left: 40%;
+}
+
+#start {
+  float: right;
+  position: relative;
+  right: 40%;
+}
+
+/**********************************
+              PROJECTS
+***********************************/
+#projectsContainer {
+  width: 80%;
+  margin: 15% 5% 5% 5%;
+}
+
+#ads img{
+  width: 250px;
+  border-radius: 3%;
+}
 
 /**********************************
              ANIMATIONS
@@ -130,10 +292,30 @@ ul{
   }
 }
 
+@keyframes potatoIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
 .main.ng-enter {
-  animation: viewIn 2s both ease-in;
+  animation: viewIn .75s both ease-in;
+  animation-delay: .75;
 }
 
 .main.ng-leave {
-  animation: viewOut 2s both ease-in;
+  animation: viewOut .75 both ease-in;
+}
+
+.navImg.ng-enter {
+  animation: potatoIn .75s both ease-in;
+  animation-delay: .75;
+}
+
+.tab.ng-enter {
+  animation: potatoIn .75s both ease-in;
+  animation-delay: .75;
 }

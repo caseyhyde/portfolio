@@ -1,4 +1,4 @@
-app.controller('landingController', ['$location', '$scope', function($location, $scope) {
+app.controller('landingController', ['$location', '$scope', 'NavFactory', function($location, $scope, NavFactory) {
   console.log("Landing controller is running\n\n");
 
   const self = this;
@@ -8,7 +8,9 @@ app.controller('landingController', ['$location', '$scope', function($location, 
   self.clickMessage = false;
 
   self.potatoClick = function() {
-    $location.path('/life');
+    NavFactory.pageHighlighter("projects");
+    NavFactory.show = true;
+    $location.path('/projects');
   }
 
   angular.element(document).ready(function() {
@@ -16,7 +18,7 @@ app.controller('landingController', ['$location', '$scope', function($location, 
     //Animate "Hi!"
     $('#welcomeHi').textillate({
       selector: '.hi',
-      initialDelay: 200,
+      initialDelay: 0,
       autoStart: true,
       loop: false,
       minDisplayTime: 18000,
