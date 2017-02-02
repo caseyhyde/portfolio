@@ -103,7 +103,39 @@ ul{
                LIFE
 ***********************************/
 #life {
+  margin: 10% 20% 10% 20%;
+  text-align: center;
+}
 
+#life h1 {
+  font-size: 5vw;
+  margin-bottom: 1%;
+}
+
+#life h4 {
+  font-size: 3vw;
+  margin-top: 1%;
+}
+
+#life img {
+  width: 20vw;
+}
+
+#lifeButtons {
+  width: inherit;
+  text-align: center;
+}
+
+#help {
+  float: left;
+  position: relative;
+  left: 40%;
+}
+
+#start {
+  float: right;
+  position: relative;
+  right: 40%;
 }
 
 
@@ -131,9 +163,10 @@ ul{
 }
 
 .main.ng-enter {
-  animation: viewIn 2s both ease-in;
+  animation: viewIn 1.5s both ease-in;
+  animation-delay: 1.5s;
 }
 
 .main.ng-leave {
-  animation: viewOut 2s both ease-in;
+  animation: viewOut 1.5s both ease-in;
 }

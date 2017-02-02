@@ -16,7 +16,7 @@ app.controller('landingController', ['$location', '$scope', function($location, 
     //Animate "Hi!"
     $('#welcomeHi').textillate({
       selector: '.hi',
-      initialDelay: 200,
+      initialDelay: 0,
       autoStart: true,
       loop: false,
       minDisplayTime: 18000,
