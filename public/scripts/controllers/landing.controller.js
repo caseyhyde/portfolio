@@ -96,7 +96,7 @@ app.controller('landingController', ['$location', '$scope', function($location, 
     $('#goods').on('inAnimationEnd.tlt', function() {
       console.log("goods inAnimationEnd");
 
-      setTimeout(goodsOut, 2000);
+      setTimeout(goodsOut, 3000);
 
       function goodsOut() {
         $('#goods').textillate('out');
@@ -146,7 +146,7 @@ app.controller('landingController', ['$location', '$scope', function($location, 
     //When "likes" have been loaded, wait, then remove "likes":
     $('#likes').on('inAnimationEnd.tlt', function() {
       console.log("likes inAnimationEnd");
-      setTimeout(likesOut, 2000);
+      setTimeout(likesOut, 4000);
       function likesOut() {
         $('#likes').textillate('out');
       }
