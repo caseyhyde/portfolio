@@ -14,6 +14,11 @@ app.config(['$routeProvider',
       controller: 'lifeController',
       controllerAs: 'life'
     })
+    .when('/projects', {
+      templateUrl: '/views/templates/projects.html',
+      controller: 'ProjectsController',
+      controllerAs: 'projects'
+    })
     .otherwise({
       redirectTo: '/landing'
     })

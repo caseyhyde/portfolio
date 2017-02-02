@@ -8,7 +8,9 @@ app.controller('landingController', ['$location', '$scope', 'NavFactory', functi
   self.clickMessage = false;
 
   self.potatoClick = function() {
-    $location.path('/life');
+    NavFactory.pageHighlighter("projects");
+    NavFactory.show = true;
+    $location.path('/projects');
   }
 
   angular.element(document).ready(function() {
