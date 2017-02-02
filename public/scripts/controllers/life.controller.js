@@ -1,3 +1,3 @@
-app.controller('helloController', function() {
+app.controller('lifeController', function() {
   console.log("Hello controller is running");
 });//End controller

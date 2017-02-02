@@ -1,8 +1,12 @@
+<div id="clickTip">
+  <p class="animated wobble" ng-if="landing.clickMessage">(Click the potato)</p>
+</div>
 <div id="welcome">
   <div id="welcomeHi">
     <ul class="hi">
       <li>Hi!</h1>
     </ul>
+    <img id="potato" class="animated rubberBand" src="/assets/potato.svg" ng-if="landing.potato" ng-click="landing.potatoClick()">
   </div>
   <div id="welcomeName">
     <ul class="name">
@@ -28,14 +32,14 @@
 
   <div id="goods" ng-show="landing.goods">
     <ul class="things">
-      <li data-out-effect="fadeOutDownBid" data-in-effect="fadeIn">Javasacript   AngularJS   Node.js   Express.js   MongoDB   PostgreSQL   Amazon Web Services   AWS.S3   Firebase Authentication   Angular Material   Twitter Bootstrap   HTML5   CSS3   Heroku Deployment   Heroku Addons   GIT   jQuery</br><br></br><br/>Break should have happened</li>
+      <li>Javasacript   AngularJS   Node.js   Express.js   MongoDB   PostgreSQL   Amazon Web Services   AWS.S3   Firebase Authentication   Angular Material   Twitter Bootstrap   HTML5   CSS3   Heroku Deployment   Heroku Addons   GIT   jQuery</li>
     </ul>
     <!-- <h5 id="welcomeMessage">Logic, puzzles, building, fixing, taking stuff apart, putting it back together, solving problems, more logic, triple nested for loops, complex conditionals, & writing efficient code are my jam.</h5>
     <h6 class="tlt">Frilly portfolio sites, UI/UX/front end work -- not so much.</h6> -->
   </div>
   <div id="likes" ng-show="landing.likes">
     <ul class="things">
-      <li data-out-effect="fadeOutDownBid" data-in-effect="fadeIn">Logic   Puzzles   Building   Fixing   Problem-Solving   Taking stuff apart   Putting it back together   More logic   Triple-nested-for-loops   Complex conditionals   Efficient code   Hunting   Gathering</li>
+      <li>Logic   Puzzles   Building   Fixing   Problem-Solving   Taking stuff apart   Putting it back together   More logic   Triple-nested-for-loops   Complex conditionals   Efficient code   Hunting   Gathering</li>
     </ul>
   </div>
 </div>
