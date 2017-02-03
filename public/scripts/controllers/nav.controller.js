@@ -1,4 +1,4 @@
-app.controller('navController', ['NavFactory', '$rootScope', function(NavFactory, $rootScope) {
+app.controller('navController', ['NavFactory', '$rootScope', '$location', function(NavFactory, $rootScope, $location) {
   console.log("Nav controller is running");
 
   const self = this;
@@ -15,6 +15,10 @@ app.controller('navController', ['NavFactory', '$rootScope', function(NavFactory
   self.toggleHamburger = function() {
     self.hamburgerOpen = !self.hamburgerOpen;
   };
+
+  self.backToLanding = function() {
+    $location.path('/landing');
+  }
 
 
 

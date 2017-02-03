@@ -4,9 +4,11 @@
     <meta charset="utf-8">
     <title>Casey Hyde | Portfolio</title>
     <!-- Styles -->
-    <link rel="stylesheet" href="/styles/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
     <link rel="stylesheet" href="/vendor/animate.min.css">
+    <link rel="stylesheet" href="/styles/styles.css">
     <!-- vendor -->
     <script src="/vendor/angular.min.js" type="text/javascript"></script>
     <script src="/vendor/angular-route.min.js" type="text/javascript"></script>
@@ -31,7 +33,7 @@
     <header ng-controller="navController as nav">
       <nav ng-include="'/views/templates/nav.html'"></nav>
     </header>
-    <main class="main" ng-view></main>
+    <main class="rotate" ng-view></main>
     <footer ng-if="nav.show">&copy;Casey Hyde | 2017</footer>
   </body>
 </html>
