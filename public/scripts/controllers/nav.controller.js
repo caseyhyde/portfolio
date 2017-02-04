@@ -3,14 +3,14 @@ app.controller('navController', ['NavFactory', '$rootScope', '$location', functi
 
   const self = this;
 
-  self.show = false;
+  self.show = true;
   self.highlighted = "";
 
-  $rootScope.$on('$routeChangeSuccess', function(next, last) {
-    self.show = NavFactory.show;
-    self.highlighted = NavFactory.highlight;
-    console.log("route change detected", self.highlighted);
-  });
+  // $rootScope.$on('$routeChangeSuccess', function(next, last) {
+  //   self.show = NavFactory.show;
+  //   self.highlighted = NavFactory.highlight;
+  //   console.log("route change detected", self.highlighted);
+  // });
 
   self.toggleHamburger = function() {
     self.hamburgerOpen = !self.hamburgerOpen;
