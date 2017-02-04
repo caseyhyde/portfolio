@@ -1,14 +1,26 @@
 /***************************
           GENERAL
 ****************************/
+
+/*******************
+      COLORS
+
+RED: #B36464
+********************/
+
 body {
   height: 100%;
+  width: 100%;
   /*max-height: 500px;
   overflow: hidden;*/
-  background-color: #141414;
+  background-color: white;
+  /*background-image: url('/assets/redrocks.png');*/
   /*background-color: white;*/
-  color: #c3c3c3;
-  font-family: 'Amatic SC', cursive;
+  color: black;
+  /*font-family: 'Amatic SC', cursive;*/
+  /*font-family: 'Source Code Pro', monospace;*/
+  font-family: 'Poiret One', cursive;
+
 }
 /****************************
             NAV
@@ -218,6 +230,13 @@ ul{
   border-right: 200px;
   overflow: hidden;
 }
+
+#rightArrow {
+  width: 50px;
+  position: absolute;
+  left: 85%;
+  top: 50%;
+}
 /**********************************
                LIFE
 ***********************************/
@@ -260,16 +279,108 @@ ul{
 /**********************************
               PROJECTS
 ***********************************/
-#projectsContainer {
-  width: 80%;
-  margin: 15% 5% 5% 5%;
+.firstProjectContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15%;
+  margin-right: 0%;
 }
 
-#ads img{
-  width: 250px;
-  border-radius: 3%;
+.otherProjectContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0%;
+  margin-right: 0%;
 }
 
+.projectImage {
+  /*position: absolute;*/
+  /*right: 0px;*/
+  z-index: 10;
+  /*flex: 1;*/
+  /*border-radius: 50%;*/
+}
+
+/*******************
+Right Aligned Images
+********************/
+.screenshotA {
+  float: right;
+  width: 40vw;
+  height: 25vw;
+  margin-right: 0%;
+  border-bottom: 1vw solid white;
+}
+
+.projectTitleA {
+  float: left;
+  background-color: #B36464;
+  color: white;
+  padding-left: 5%;
+  padding-right: 50%;
+  position: absolute;
+  left: 0%;
+  z-index: 1;
+}
+
+.projectBlurbA {
+  position: absolute;
+  left: 5%;
+  width: 40%;
+  margin-top: 5%;
+  color: #525252;
+  /*position: absolute;;
+  top: 10%;*/
+}
+
+/*******************
+Left Aligned Images
+********************/
+.screenshotB {
+  float: left;
+  width: 40vw;
+  height: 25vw;
+  margin-left: 0%;
+  border-bottom: 1vw solid white;
+}
+
+.projectTitleB {
+  float: right;
+  background-color: #B36464;
+  color: white;
+  padding-right: 5%;
+  padding-left: 50%;
+  position: absolute;
+  right: 0%;
+  z-index: 1;
+}
+
+.projectBlurbB {
+  position: absolute;
+  right: 5%;
+  width: 40%;
+  margin-top: 5%;
+  color: #525252;
+  /*position: absolute;;
+  top: 10%;*/
+}
+
+.projectArrow {
+  width: 50px;
+  /*transform: rotate(90deg);*/
+  position: relative;
+  left: 25vw;
+  top: 50px;
+}
+
+.arrow {
+  width: 50px;
+  transform: rotate(90deg);
+  position: absolute;
+  z-index: 11;
+}
 /**********************************
              ANIMATIONS
 ***********************************/
@@ -293,29 +404,41 @@ ul{
 }
 
 @keyframes potatoIn {
-  from {
+  0% {
     transform: scale(0);
   }
-  to {
+  40% {
+    transform: scale(.5);
+  }
+  90% {
+    transform: scale(1.4);
+  }
+  100% {
     transform: scale(1);
   }
 }
 
-.main.ng-enter {
-  animation: viewIn .75s both ease-in;
-  animation-delay: .75;
+@keyframes expandDown {
+  to {
+    height: 1000px;
+  }
 }
 
-.main.ng-leave {
-  animation: viewOut .75 both ease-in;
+.openProject {
+  animation: expandDown 1.5s;
+}
+
+.rotate.ng-enter {
+  animation: viewIn 1.5s both ease-in;
+  animation-delay: 1s;
 }
 
 .navImg.ng-enter {
-  animation: potatoIn .75s both ease-in;
-  animation-delay: .75;
+  animation: potatoIn 1s both ease-in;
+  animation-delay: 1.5s;
 }
 
 .tab.ng-enter {
-  animation: potatoIn .75s both ease-in;
-  animation-delay: .75;
+  animation: potatoIn 1s both ease-in;
+  animation-delay: 1.5s;
 }

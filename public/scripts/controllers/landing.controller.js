@@ -4,10 +4,10 @@ app.controller('landingController', ['$location', '$scope', 'NavFactory', functi
   const self = this;
   self.goods = true;
   self.likes = false;
-  self.potato = false;
+  self.arrow = false;
   self.clickMessage = false;
 
-  self.potatoClick = function() {
+  self.arrowClick = function() {
     NavFactory.pageHighlighter("projects");
     NavFactory.show = true;
     $location.path('/projects');
@@ -27,12 +27,12 @@ app.controller('landingController', ['$location', '$scope', 'NavFactory', functi
         delayScale: 1,
         delay: 200,
         sync: false,
-        shuffle: false,
-        callback: function() {
-          self.potato = true;
-          // self.potatoClick = true;
-          $scope.$apply();
-        }
+        shuffle: false
+        // callback: function() {
+        //   self.arrow = true;
+        //   // self.potatoClick = true;
+        //   $scope.$apply();
+        // }
       },
       out: {
         effect: 'fadeOutDownBig',
@@ -170,7 +170,8 @@ app.controller('landingController', ['$location', '$scope', 'NavFactory', functi
     $('#iLike').on('outAnimationEnd.tlt', function() {
       self.goods = true;
       self.likes = false;
-      self.clickMessage = true;
+      // self.clickMessage = true;
+      self.arrow = true;
       $scope.$apply()
       console.log("iLike outAnimationEnd");
       $('#iGood').textillate('in');

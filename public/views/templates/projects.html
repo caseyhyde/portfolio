@@ -1,5 +1,81 @@
-<div id="projectsContainer">
-  <div id="ads">
-    <img src="/assets/ads-screen-shot.png" alt="screenshot"/>
+<div id="adsContainer" class="firstProjectContainer" ng-class="{ 'openProject' : projects.ads }">
+  <div class="projectImage">
+    <img id="ads" class="screenshotA" src="/assets/blinds.jpeg" alt="screenshot"/>
+  </div>
+  <div class="projectTitleA">
+    <h1>American Drapery Systems</h1>
+  </div>
+  <div class="projectBlurbA">
+    <h1>Solving a time consuming problem for a comericial window treatment comapany</h1>
+    <img class="arrow" src="/assets/right-arrow.svg" ng-click="projects.openProjects('ads')"/>
+  </div>
+  <!-- <div class="projectDescription">
+
+  </div> -->
+
+</div>
+
+<div id="spotCheckContainer" class="otherProjectContainer">
+  <div class="projectImage">
+    <img id="ads" class="screenshotB" src="/assets/wallride.jpg" alt="screenshot"/>
+  </div>
+  <div class="projectTitleB">
+    <h1>Spot Check</h1>
+  </div>
+  <div class="projectBlurbB">
+    <h1>An answer to the age-old question: "Where should we go skate?"</h1>
+    <img class="arrow" src="/assets/right-arrow.svg"/>
+  </div>
+</div>
+
+<div id="calculatorContainer" class="otherProjectContainer">
+  <div class="projectImage">
+    <img id="ads" class="screenshotA" src="/assets/calculator.jpeg" alt="screenshot"/>
+  </div>
+  <div class="projectTitleA">
+    <h1>Connected Calculator</h1>
+  </div>
+  <div class="projectBlurbA">
+    <h1>A not so simple calculator, with a Node.js backend doing the math</h1>
+    <img class="arrow" src="/assets/right-arrow.svg"/>
+  </div>
+</div>
+
+<div id="lifeContainer" class="otherProjectContainer">
+  <div class="projectImage">
+    <img id="ads" class="screenshotB" src="/assets/giphy.gif" alt="screenshot"/>
+  </div>
+  <div class="projectTitleB">
+    <h1>Conway's Game of Life</h1>
+  </div>
+  <div class="projectBlurbB">
+    <h1>Cellular Automata, just for fun</h1>
+    <img class="arrow" src="/assets/right-arrow.svg"/>
+  </div>
+</div>
+
+<div id="thisSiteContainer" class="otherProjectContainer">
+  <div class="projectImage">
+    <img id="ads" class="screenshotA" src="/assets/bestcustomgif.gif" alt="screenshot"/>
+  </div>
+  <div class="projectTitleA">
+    <h1>This site</h1>
+  </div>
+  <div class="projectBlurbA">
+    <h1>Here's how I built it</h1>
+    <img class="arrow" src="/assets/right-arrow.svg"/>
+  </div>
+</div>
+
+<div id="firstSiteContainer" class="otherProjectContainer">
+  <div class="projectImage">
+    <img id="ads" class="screenshotB" src="/assets/firstsite.png" alt="screenshot"/>
+  </div>
+  <div class="projectTitleB">
+    <h1>My first website</h1>
+  </div>
+  <div class="projectBlurbB">
+    <h1>Built 5 months ago to get into Prime Digital Academy. This was the first working thing I've ever built.</h1>
+    <img class="arrow" src="/assets/right-arrow.svg"/>
   </div>
 </div>
