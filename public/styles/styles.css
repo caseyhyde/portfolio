@@ -300,6 +300,7 @@ ul{
   /*right: 0px;*/
   z-index: 10;
   /*flex: 1;*/
+  /*border-radius: 50%;*/
 }
 
 /*******************
@@ -310,6 +311,7 @@ Right Aligned Images
   width: 40vw;
   height: 25vw;
   margin-right: 0%;
+  border-bottom: 1vw solid white;
 }
 
 .projectTitleA {
@@ -341,6 +343,7 @@ Left Aligned Images
   width: 40vw;
   height: 25vw;
   margin-left: 0%;
+  border-bottom: 1vw solid white;
 }
 
 .projectTitleB {
@@ -375,6 +378,8 @@ Left Aligned Images
 .arrow {
   width: 50px;
   transform: rotate(90deg);
+  position: absolute;
+  z-index: 11;
 }
 /**********************************
              ANIMATIONS
@@ -413,13 +418,19 @@ Left Aligned Images
   }
 }
 
+@keyframes expandDown {
+  to {
+    height: 1000px;
+  }
+}
+
+.openProject {
+  animation: expandDown 1.5s;
+}
+
 .rotate.ng-enter {
   animation: viewIn 1.5s both ease-in;
   animation-delay: 1s;
-}
-
-.rotate.ng-leave {
-  animation: viewOut 1s;
 }
 
 .navImg.ng-enter {
