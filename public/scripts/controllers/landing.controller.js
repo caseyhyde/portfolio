@@ -28,11 +28,6 @@ app.controller('landingController', ['$location', '$scope', 'NavFactory', functi
         delay: 200,
         sync: false,
         shuffle: false
-        // callback: function() {
-        //   self.arrow = true;
-        //   // self.potatoClick = true;
-        //   $scope.$apply();
-        // }
       },
       out: {
         effect: 'fadeOutDownBig',
