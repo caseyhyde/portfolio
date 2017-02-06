@@ -51,7 +51,7 @@ header {
 
 .tab {
   display: inline-block;
-  font-size: 4vw;
+  font-size: 2vw;
   margin-right: 9%;
 }
 /**********************************
@@ -173,7 +173,7 @@ https://codepen.io/designcouch/
 }
 
 #welcome {
-  margin-top: 15%;
+  margin-top: 5%;
   font-size: 3.25vw;
   overflow: hidden;
 }
@@ -213,7 +213,7 @@ li {
 #likes, #goods {
   text-align: center;
   width: 60%;
-  height: 250px;
+  height: 300px;
   margin: auto;
   overflow: hidden;
   font-size: 2vw;
@@ -302,6 +302,17 @@ ul{
   z-index: 10;
   /*flex: 1;*/
   /*border-radius: 50%;*/
+}
+
+.viewButton {
+  position: absolute;
+  right: 5%;
+  text-align: right;
+}
+
+.viewButton img {
+  width: 36px;
+  padding-bottom: 5%;
 }
 
 /*******************
