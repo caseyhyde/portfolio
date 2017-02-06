@@ -213,7 +213,7 @@ li {
 #likes, #goods {
   text-align: center;
   width: 60%;
-  height: 200px;
+  height: 250px;
   margin: auto;
   overflow: hidden;
   font-size: 2vw;
@@ -285,6 +285,7 @@ ul{
   flex-direction: column;
   margin-top: 15%;
   margin-right: 0%;
+  height: 1500px;
 }
 
 .otherProjectContainer {
@@ -419,8 +420,11 @@ Left Aligned Images
 }
 
 @keyframes expandDown {
+  from {
+    height: 500px;
+  }
   to {
-    height: 1000px;
+    height: 2000px;
   }
 }
 
@@ -441,4 +445,9 @@ Left Aligned Images
 .tab.ng-enter {
   animation: potatoIn 1s both ease-in;
   animation-delay: 1.5s;
+}
+
+.landingArrow.ng-enter {
+  animation: potatoIn 1s both ease-in;
+  animation-delay: 1s;
 }

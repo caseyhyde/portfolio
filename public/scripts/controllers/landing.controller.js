@@ -102,6 +102,8 @@ app.controller('landingController', ['$location', '$scope', 'NavFactory', functi
     //When "goods" finishes loading, wait, then start removing goods:
     $('#goods').on('inAnimationEnd.tlt', function() {
       console.log("goods inAnimationEnd");
+      self.arrow = true;
+      $scope.$apply();
       setTimeout(goodsOut, 2500);
       function goodsOut() {
         $('#goods').textillate('out');
@@ -166,7 +168,7 @@ app.controller('landingController', ['$location', '$scope', 'NavFactory', functi
       self.goods = true;
       self.likes = false;
       // self.clickMessage = true;
-      self.arrow = true;
+      // self.arrow = true;
       $scope.$apply()
       console.log("iLike outAnimationEnd");
       $('#iGood').textillate('in');
