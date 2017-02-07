@@ -19,6 +19,11 @@ app.config(['$routeProvider',
       controller: 'ProjectsController',
       controllerAs: 'projects'
     })
+    .when('/ads', {
+      templateUrl: '/views/templates/ads.html',
+      controller: 'LiveViewController',
+      controllerAs: 'liveView'
+    })
     .otherwise({
       redirectTo: '/landing'
     })

@@ -11,7 +11,7 @@
     <span>Life</span>
   </div>
   <div class="tab" ng-if="nav.show" ng-class="{ 'highlighted' : nav.highlighted === 'projects' }">
-    <span>Projects</span>
+    <span ng-click="nav.redirect('projects')">Projects</span>
   </div>
   <div class="tab" ng-if="nav.show" ng-class="{ 'highlighted' : nav.highlighted === 'bio' }">
     <span>Bio</span>

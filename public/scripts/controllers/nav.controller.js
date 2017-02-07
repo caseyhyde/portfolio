@@ -20,6 +20,10 @@ app.controller('navController', ['NavFactory', '$rootScope', '$location', functi
     $location.path('/landing');
   }
 
+  self.redirect = function(page) {
+    $location.path('/' + page);
+  }
+
 
 
 

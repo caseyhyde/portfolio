@@ -27,6 +27,7 @@
     <script src="/scripts/controllers/landing.controller.js" type="text/javascript"></script>
     <script src="/scripts/controllers/life.controller.js" type="text/javascript"></script>
     <script src="/scripts/controllers/projects.controller.js" type="text/javascript"></script>
+    <script src="/scripts/controllers/live.view.controller.js" type="text/javascript"></script>
     <!-- Factories -->
     <script src="/scripts/factories/nav-factory.js" type="text/javascript"></script>
 
@@ -36,7 +37,7 @@
     <header ng-controller="navController as nav">
       <nav ng-include="'/views/templates/nav.html'"></nav>
     </header>
-    <main class="rotate" ng-view></main>
+    <main id="main" class="rotate" ng-view></main>
     <footer ng-if="nav.show">&copy;Casey Hyde | 2017</footer>
   </body>
 </html>

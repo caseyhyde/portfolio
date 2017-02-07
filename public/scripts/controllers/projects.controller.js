@@ -1,11 +1,11 @@
-app.controller('ProjectsController', function() {
+app.controller('ProjectsController', ['$location', function($location) {
   console.log('ProjectsController running');
 
   const self = this;
 
-  self.openProjects = function(projectToOpen) {
-    self[projectToOpen] = true;
-  };
+  self.liveView = function(project) {
+    console.log('liveView Clicked');
+    $location.path('/' + project)
+  }
 
-
-});
+}]);
