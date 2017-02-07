@@ -24,6 +24,10 @@ app.controller('navController', ['NavFactory', '$rootScope', '$location', functi
     $location.path('/' + page);
   }
 
+  self.scroll = function() {
+    console.log("scrolling");
+    console.log(this.pageYOffest);
+  }
 
 
 

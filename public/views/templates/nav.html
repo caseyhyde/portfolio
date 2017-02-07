@@ -1,12 +1,13 @@
 <!-- <div id="potato">
   <img class="navImg" src="/assets/potato.svg" alt="" ng-if="nav.show" ng-click="nav.backToLanding()">
 </div> -->
-<div id="hamburger" class="navImg" ng-if="nav.show" ng-click="nav.toggleHamburger()" ng-class="{ 'open' : nav.hamburgerOpen }">
+<div id="hamburger" class="navImg" scroll ng-show="boolChangeClass" ng-click="nav.toggleHamburger()" ng-class="{ 'open' : nav.hamburgerOpen }">
   <span></span>
   <span></span>
   <span></span>
 </div>
-<div id="tabs">
+<template><h1>Hello world<h1></template>
+<div id="tabs" ng-show="!boolChangeClass">
   <div class="tab" ng-if="nav.show" ng-class="{ 'highlighted' : nav.highlighted === 'life' }">
     <span>Life</span>
   </div>
@@ -19,7 +20,7 @@
   <div class="tab" ng-if="nav.show" ng-class="{ 'highlighted' : nav.highlighted === 'resume' }">
     <span>Resume</span>
   </div>
-  <div class="tab" ng-if="nav.show" ng-class="{ 'highlighted' : nav.highlighted === 'contact' }">
+  <div class="tab" ng-if="nav.show" ng-class="{ 'highlighted' : nav.highlighted === 'contact' }" ng-click="nav.scroll()">
     <span>Contact</span>
   </div>
 </div>

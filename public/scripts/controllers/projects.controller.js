@@ -6,6 +6,6 @@ app.controller('ProjectsController', ['$location', function($location) {
   self.liveView = function(project) {
     console.log('liveView Clicked');
     $location.path('/' + project)
-  }
+  };
 
 }]);
