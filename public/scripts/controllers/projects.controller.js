@@ -3,6 +3,9 @@ app.controller('ProjectsController', ['$location', function($location) {
 
   const self = this;
 
+  self.adsShow = false;
+  self.adsHide = true;
+
   self.liveView = function(project) {
     console.log('liveView Clicked');
     $location.path('/' + project)

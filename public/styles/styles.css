@@ -5,14 +5,8 @@
 body {
   height: 100%;
   width: 100%;
-  /*max-height: 500px;
-  overflow: hidden;*/
   background-color: rgb(41, 41, 41);
-  /*background-image: url('/assets/redrocks.png');*/
-  /*background-color: white;*/
   color: rgb(191, 191, 191);
-  /*font-family: 'Amatic SC', cursive;*/
-  /*font-family: 'Source Code Pro', monospace;*/
   font-family: 'Poiret One', cursive;
 
 }
@@ -20,6 +14,7 @@ body {
 #main {
   width: 100%;
   margin-top: 10%;
+  height: 100%;
 }
 
 a {
@@ -366,14 +361,21 @@ ul{
 /**********************************
               PROJECTS
 ***********************************/
+#adsContainer {
+  width: 100%;
+  height: 100%;
+}
 
 #adsTitle {
   font-size: 40px;
+  width: 90%;
+  text-align: center;
   background-color: rgb(34, 34, 34);
   color: rgb(128, 128, 128);
   border-radius: 7px;
-  padding-left: 50px;
+  /*padding-left: 50px;*/
   padding-right: 15px;
+  margin-left: 15px;
   margin-right: 15px;
   position: absolute;
   top: 200px;
@@ -405,7 +407,7 @@ ul{
   padding: 5px 15px 5px 50px;
   margin-right: 15px;
   position: absolute;
-  top: 495px;
+  top: 550px;
   right: 50px;
 }
 
@@ -418,7 +420,7 @@ ul{
   padding: 5px 15px 5px 50px;
   margin-right: 15px;
   position: absolute;
-  top: 740px;
+  top: 795px;
   right: 50px;
 }
 
@@ -427,7 +429,7 @@ ul{
   text-align: center;
   color: #808080;
   position: absolute;
-  top: 750px;
+  top: 825px;
   left: 100px;
 }
 
@@ -460,6 +462,98 @@ ul{
   padding-left: 5px;
 }
 
+#spotCheckTitle {
+  font-size: 40px;
+  text-align: center;
+  width: 90%;
+  background-color: rgb(34, 34, 34);
+  color: rgb(128, 128, 128);
+  border-radius: 7px;
+  margin-right: 15px;
+  position: absolute;
+  top: 1040px;
+  right: 50px;
+}
+
+#spotCheckBlurb {
+  width: 40%;
+  font-size: 15px;
+  color: rgb(128, 128, 128);
+  background-color: rgb(34, 34, 34);
+  border-radius: 7px;
+  padding: 5px 15px 5px 50px;
+  margin-right: 15px;
+  margin-left: 5%;
+  position: absolute;
+  top: 1110px;
+  /*left: 50px;*/
+}
+
+#spotCheckSolution {
+  width: 40%;
+  font-size: 15px;
+  color: rgb(128, 128, 128);
+  background-color: rgb(34, 34, 34);
+  border-radius: 7px;
+  padding: 5px 15px 5px 50px;
+  margin-right: 15px;
+  position: absolute;
+  margin-left: 5%;
+  top: 1355px;
+  /*left: 50px;*/
+}
+
+#spotCheckTech {
+  width: 40%;
+  font-size: 15px;
+  color: rgb(128, 128, 128);
+  background-color: rgb(34, 34, 34);
+  border-radius: 7px;
+  padding: 5px 15px 5px 50px;
+  margin-right: 15px;
+  position: absolute;
+  margin-left: 5%;
+  top: 1705px;
+  /*right: 50px;*/
+}
+
+#spotCheckButtons {
+  width: 400px;
+  text-align: center;
+  color: #808080;
+  position: absolute;
+  top: 1700px;
+  right: 100px;
+}
+
+#spotCheckButtons img{
+  width: 50px;
+  padding-bottom: 15px;
+}
+
+#groupProjectBanner {
+  width: 150px;
+  height: 50px;
+  color: #808080;
+  position: absolute;
+  border-radius: 5px;
+  top: 5px;
+  right: 5px;
+}
+
+#groupProjectBanner img {
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+#groupProjectBanner p {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 14px;
+  padding-left: 5px;
+}
 
 .otherProjectContainer {
   width: 100%;
@@ -479,6 +573,12 @@ img.resize {
   max-height: 150%;
 }
 
+img.resizeB {
+  max-width: 150%;
+  max-height: 150%;
+  transform: translate(-50px);
+}
+
 .square, .square div{
   transform-origin: 50% 50%;
   overflow: hidden;
@@ -486,17 +586,24 @@ img.resize {
   height: 250px;
 }
 
+#adsSquare {
+  position: absolute;
+  top: 425px;
+  left: 175px;
+}
+
+#spotCheckSquare {
+  position: absolute;
+  top: 1250px;
+  right: 175px;
+}
+
 .square {
   animation: octoRotate 10s infinite;
   animation-delay: 0s;
   animation-timing-function: linear;
-  position: absolute;
-  top: 350px;
-  left: 175px;
   transform: rotate(45deg);
   border-radius: 40px;
-  /*border: 5px solid rgb(104, 168, 193);*/
-  /*background-color: rgb(104, 168, 193);*/
 }
 
 .square1 {
@@ -505,44 +612,41 @@ img.resize {
   animation-delay: 0s;
   transform: rotate(-45deg);
   border-radius: 40px;
-  /*border: 5px solid black;*/
 }
 
-@keyframes octoRotate {
-  from {
-    transform: rotate(-45deg);
-  }
-  to {
-    transform: rotate(-135deg);
-  }
+
+#adsSvgContainer {
+  top: 325px;
+  left: 75px;
 }
 
-@keyframes octoRotateBack {
-  from {
-    transform: rotate(45deg);
-  }
-  to {
-    transform: rotate(135deg);
-  }
+#adsSvgContainer div {
+  top: 50%; left: 50%;
+}
+
+#spotCheckSvgContainer {
+  top: 1150px;
+  right: 80px;
+}
+
+#spotCheckSvgContainer div {
+  top: 50%; left: 50%;
 }
 
 .svgContainer {
-    position: absolute;
-    top: 250px;
-    left: 75px;
-    width: 450px;
-    height: 450px;
-    animation: wheelSpin 60s infinite;
-    animation-timing-function: linear;
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  animation: wheelSpin 60s infinite;
+  animation-timing-function: linear;
 }
 
 .svgContainer div {
-    display: block;
-    position: absolute;
-    top: 50%; left: 50%;
-    width: 50px;
-    height: 50px;
-    margin: -25px;
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: -25px;
 }
 .svgContainer div.deg40 {
   width: 75px;
@@ -554,9 +658,14 @@ img.resize {
   height: 75px;
 }
 
-.svgContainer div.deg120 {
-  width: 75px;
-  height: 75px;
+.svgContainer div.deg80B {
+  width: 90px;
+  height: 90px;
+}
+
+.svgContainer div.deg120, div.deg120B {
+  width: 90px;
+  height: 90px;
 }
 
 .svgContainer div.deg280 {
@@ -587,12 +696,20 @@ img.resize {
   transform: rotate(40deg) translate(200px) rotate(-40deg);
 }
 
-.deg80 {
+.deg80{
   transform: rotate(80deg) translate(200px) rotate(-80deg);
+}
+
+.deg80B {
+  transform: rotate(80deg) translate(210px) rotate(-80deg);
 }
 
 .deg120 {
   transform: rotate(120deg) translate(200px) rotate(-120deg);
+}
+
+.deg120B {
+  transform: rotate(120deg) translate(210px) rotate(-120deg);
 }
 
 .deg160 {
@@ -620,23 +737,6 @@ img.resize {
   height: 25;
 }
 
-@keyframes wheelSpin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes itemSpin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-360deg);
-  }
-}
 /******************
       Buttons
 *******************/
@@ -815,10 +915,45 @@ Loading Spinner
   }
 }
 
+@keyframes octoRotate {
+  from {
+    transform: rotate(-45deg);
+  }
+  to {
+    transform: rotate(-135deg);
+  }
+}
+
+@keyframes octoRotateBack {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(135deg);
+  }
+}
+
+@keyframes wheelSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes itemSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
 .openProject {
   animation: expandDown 1.5s;
 }
-
 
 .rotate.ng-enter {
   animation: viewIn 1.5s both ease-in;
