@@ -8,9 +8,8 @@ app.controller('landingController', ['$location', '$scope', 'NavFactory', functi
   self.clickMessage = false;
 
   self.arrowClick = function() {
-    NavFactory.pageHighlighter("projects");
     NavFactory.show = true;
-    $location.path('/projects');
+    $location.path('/life');
   }
 
   angular.element(document).ready(function() {
@@ -102,7 +101,6 @@ app.controller('landingController', ['$location', '$scope', 'NavFactory', functi
     //When "goods" finishes loading, wait, then start removing goods:
     $('#goods').on('inAnimationEnd.tlt', function() {
       console.log("goods inAnimationEnd");
-      self.arrow = true;
       $scope.$apply();
       setTimeout(goodsOut, 2500);
       function goodsOut() {
@@ -153,6 +151,8 @@ app.controller('landingController', ['$location', '$scope', 'NavFactory', functi
     //When "likes" have been loaded, wait, then remove "likes":
     $('#likes').on('inAnimationEnd.tlt', function() {
       console.log("likes inAnimationEnd");
+      self.arrow = true;
+      $scope.$apply();
       setTimeout(likesOut, 4000);
       function likesOut() {
         $('#likes').textillate('out');

@@ -10,9 +10,7 @@ app.config(['$routeProvider',
       controllerAs: 'landing'
     })
     .when('/life', {
-      templateUrl: '/views/templates/life.html',
-      controller: 'lifeController',
-      controllerAs: 'life'
+      templateUrl: '/views/templates/life.html'
     })
     .when('/projects', {
       templateUrl: '/views/templates/projects.html',
@@ -21,6 +19,16 @@ app.config(['$routeProvider',
     })
     .when('/ads', {
       templateUrl: '/views/templates/ads.html',
+      controller: 'LiveViewController',
+      controllerAs: 'liveView'
+    })
+    .when('/spotCheck', {
+      templateUrl: '/views/templates/spotCheck.html',
+      controller: 'LiveViewController',
+      controllerAs: 'liveView'
+    })
+    .when('/gameOfLife', {
+      templateUrl: '/views/templates/gameOfLife.html',
       controller: 'LiveViewController',
       controllerAs: 'liveView'
     })

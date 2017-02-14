@@ -8,11 +8,11 @@
 </div>
 <template><h1>Hello world<h1></template>
 <div id="tabs" ng-show="!boolChangeClass">
-  <div class="tab" ng-if="nav.show" ng-class="{ 'highlighted' : nav.highlighted === 'life' }">
+  <div class="tab" ng-if="nav.show" ng-class="{ 'highlighted' : nav.highlighted === 'life' }" ng-click="nav.redirect('life')">
     <span>Life</span>
   </div>
-  <div class="tab" ng-if="nav.show" ng-class="{ 'highlighted' : nav.highlighted === 'projects' }">
-    <span ng-click="nav.redirect('projects')">Projects</span>
+  <div class="tab" ng-if="nav.show" ng-class="{ 'highlighted' : nav.highlighted === 'projects' }" ng-click="nav.redirect('projects')">
+    <span>Projects</span>
   </div>
   <div class="tab" ng-if="nav.show" ng-class="{ 'highlighted' : nav.highlighted === 'bio' }">
     <span>Bio</span>

@@ -5,11 +5,11 @@ app.controller('LiveViewController', ['$scope', '$location', function($scope, $l
 
   self.loading = true;
 
-  $scope.$on('$viewContentLoaded', function() {
-    console.log("iFrame Loaded!");
-    self.loading = false;
-
-  })
+  // $scope.$on('$viewContentLoaded', function() {
+  //   console.log("iFrame Loaded!");
+  //   self.loading = false;
+  //
+  // })
 
   self.back = function() {
     $location.path('/projects');
