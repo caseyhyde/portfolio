@@ -1,51 +1,62 @@
 <!-- ADS -->
-<div id="adsSquare" class="square">
-  <div class="square1">
-    <img id="ads" class="resize" src="/assets/bestestblinds.jpeg" alt="screenshot"/>
-  </div>
-</div>
-<div id="adsSvgContainer" class="svgContainer">
-  <div class="deg0"><img src="assets/svgs/angularjs.svg" alt="Angular Logo"></div>
-  <div class="deg40"><img src="assets/svgs/aws.svg" alt="Amazon Web Services Logo"></div>
-  <div class="deg80"><img src="assets/svgs/firebase.svg" alt="Firebase Logo"></div>
-  <div class="deg120"><img src="assets/svgs/postgresql.svg" alt="PostgreSQL Logo"></div>
-  <div class="deg160"><img src="assets/svgs/html5.svg" alt="html5 logo"></div>
-  <div class="deg200"><img src="assets/svgs/css3.svg" alt="CSS3 Logo"></div>
-  <div class="deg240"><img src="assets/svgs/javascript.svg" alt="Javascript Logo"></div>
-  <div class="deg280"><img src="assets/svgs/nodejs.svg" alt="Node.js Logo"></div>
-  <div class="deg320"><img src="assets/svgs/heroku.svg" alt="Heroku Logo"></div>
-</div>
-<div id="adsTitle">
+<div id="adsTitle" class="projectTitle">
   <span>AMERICAN DRAPERY SYSTEMS</span>
 </div>
-<div id="adsBlurb">
-  <span><h3>THE PROBLEM</h3></span>
-  <span>American Drapery Systems designs, builds, and installs custom commerical window treatments (blinds, shades, cubicle dividers, etc). The process for starting projects involves an intial site survey where measurements are taken of windows to be covered. Previously this was done in a note taking app on the client's tablet (Evernote&trade;). The process was akin to writing in a blank notebook, to later be entered into spreadsheets, emails, and PDFs. It was repetetive, time consuming, and unorganized. Often, images were taken of the job site and relevant files were uploaded (office blueprints, etc), further adding to the difficulty of keeping everything in one place.</span>
-</div>
-<div id="adsSolution">
-  <span><h3>THE SOLUTION</h3></span>
-  <div id="groupProjectBanner">
-    <img id="sprimeSpiral" src="assets/svgs/primespiral.svg"/>
-    <p>Group Project</p>
+<div id="adsContainer" class="projectContainer">
+  <div id="adsSpinners" class="leftSpinners">
+    <div id="adsSquare" class="square">
+      <div class="square1">
+        <img id="ads" class="resize" src="/assets/bestestblinds.jpeg" alt="screenshot"/>
+      </div>
+    </div>
+    <div id="adsSvgContainer" class="svgContainer">
+      <div class="deg0"><img src="assets/svgs/angularjs.svg" alt="Angular Logo"></div>
+      <div class="deg40"><img src="assets/svgs/aws.svg" alt="Amazon Web Services Logo"></div>
+      <div class="deg80"><img src="assets/svgs/firebase.svg" alt="Firebase Logo"></div>
+      <div class="deg120"><img src="assets/svgs/postgresql.svg" alt="PostgreSQL Logo"></div>
+      <div class="deg160"><img src="assets/svgs/html5.svg" alt="html5 logo"></div>
+      <div class="deg200"><img src="assets/svgs/css3.svg" alt="CSS3 Logo"></div>
+      <div class="deg240"><img src="assets/svgs/javascript.svg" alt="Javascript Logo"></div>
+      <div class="deg280"><img src="assets/svgs/nodejs.svg" alt="Node.js Logo"></div>
+      <div class="deg320"><img src="assets/svgs/heroku.svg" alt="Heroku Logo"></div>
+    </div>
+    <div id="adsButtons" class="leftButtons">
+      <h1 class="liveView" ng-click="projects.liveView('ads')">View it Live</h1>
+      <h1 class="gitView"><a href="https://github.com/caseyhyde/american-drapery-systems" target="_blank"><img src="/assets/github.svg"/>View on Github</a></h1>
+    </div>
   </div>
-  <span>A comprhensive intial site survey, client information, and job management web application.</span>
-  <span>An all-in-one place to save customer information, create new site surveys, take measurements, and upload relevant files.</span>
-  <span>An organized central location to view and search through all current and past jobs, associated surveys, client information, and saved files.</span>
-  <span>PDF and Printer friendly export options, elimating the need to enter job information into secondary applications</span>
-</div>
-<div id="adsTech">
-  <span><h3>TECHNOLOGIES USED</h3></span>
-  <span><h4>FRONT END</h4></span>
-  <span>AngularJS | Angular Material | Javascript | HTML5 | CSS3</span>
-  <span><h4>BACK END</h4></span>
-  <span>Firebase (authentication) | AWS.S3 & AWS-SDK | Node.js | Express.js | PostgreSQL | Heroku (hosting)</span>
-  <span><h5>Colaboration managed via Git, Github, and Github Projects</h5></span>
-</div>
-<div id="adsButtons">
-  <h1 class="liveView" ng-click="projects.liveView('ads')">View it Live</h1>
-  <h1 class="gitView"><a href="https://github.com/caseyhyde/american-drapery-systems" target="_blank"><img src="/assets/github.svg"/>View on Github</a></h1>
+  <div id="adsInfo" class="rightInfo">
+    <div id="adsBlurb" class="rightBlurb">
+      <span><h3>THE PROBLEM</h3></span>
+      <span>American Drapery Systems designs, builds, and installs custom commerical window treatments (blinds, shades, cubicle dividers, etc). The process for starting projects involves an intial site survey where measurements are taken of windows to be covered. Previously this was done in a note taking app on the client's tablet (Evernote&trade;). The process was akin to writing in a blank notebook, to later be entered into spreadsheets, emails, and PDFs. It was repetetive, time consuming, and unorganized. Often, images were taken of the job site and relevant files were uploaded (office blueprints, etc), further adding to the difficulty of keeping everything in one place.</span>
+    </div>
+    <div id="adsSolution" class="rightSolution">
+      <div id="groupProjectBanner">
+        <h3>THE SOLUTION</h3>
+        <div id="primeLogo">
+          <img id="sprimeSpiral" src="assets/svgs/primespiral.svg"/>
+          <p>Group Project</p>
+        </div>
+      </div>
+      <span>A comprhensive intial site survey, client information, and job management web application.</span>
+      <span>An all-in-one place to save customer information, create new site surveys, take measurements, and upload relevant files.</span>
+      <span>An organized central location to view and search through all current and past jobs, associated surveys, client information, and saved files.</span>
+      <span>PDF and Printer friendly export options, elimating the need to enter job information into secondary applications</span>
+    </div>
+    <div id="adsTech" class="rightTech">
+      <span><h3>TECHNOLOGIES USED</h3></span>
+      <span><h4>FRONT END</h4></span>
+      <span>AngularJS | Angular Material | Javascript | HTML5 | CSS3</span>
+      <span><h4>BACK END</h4></span>
+      <span>Firebase (authentication) | AWS.S3 & AWS-SDK | Node.js | Express.js | PostgreSQL | Heroku (hosting)</span>
+      <span><h5>Colaboration managed via Git, Github, and Github Projects</h5></span>
+    </div>
+  </div>
 </div>
 <!-- SPOT CHECK -->
+<div id="spotCheckTitle" class="projectTitle">
+  <span>SPOT CHECK</span>
+</div>
 <div id="spotCheckSquare" class="square">
   <div class="square1">
     <img id="ads" class="resizeB" src="/assets/wallride.jpg" alt="screenshot"/>
@@ -61,9 +72,6 @@
   <div class="deg240"><img src="assets/svgs/javascript.svg" alt="Javascript Logo"></div>
   <div class="deg280"><img src="assets/svgs/nodejs.svg" alt="Node.js Logo"></div>
   <div class="deg320"><img src="assets/svgs/heroku.svg" alt="Heroku Logo"></div>
-</div>
-<div id="spotCheckTitle">
-  <span>SPOT CHECK</span>
 </div>
 <div id="spotCheckBlurb">
   <span><h3>THE PROBLEM</h3></span>
@@ -84,10 +92,10 @@
   <h1 class="liveView" ng-click="projects.liveView('spotCheck')">View it Live</h1>
   <h1 class="gitView"><a href="https://github.com/caseyhyde/spot-check" target="_blank"><img src="/assets/github.svg"/>View on Github</a></h1>
 </div>
-<div id="lifeTitle">
+<!-- <div id="lifeTitle">
   <span>CONWAY'S GAME OF LIFE</span>
 </div>
-<!-- <div id="spotCheckSolution">
+<div id="spotCheckSolution">
   <span><h3>THE SOLUTION:</h3></span>
   <div id="groupProjectBanner">
     <img id="sprimeSpiral" src="assets/svgs/primespiral.svg"/>
