@@ -1,26 +1,21 @@
 #helloWorld {
   font-size: 200px;
 }
-
 body {
   height: 100%;
   width: 100%;
   background-color: rgb(41, 41, 41);
   color: rgb(191, 191, 191);
   font-family: 'Poiret One', cursive;
-
 }
-
 #main {
   height: 100%;
-  margin: 120px 2.5% 2.5% 2.5%;
+  margin-top: 120px;
 }
-
 a {
   text-decoration: none;
   color: inherit;
 }
-
 a:hover {
   text-decoration: none;
   color: inherit;
@@ -39,12 +34,10 @@ header {
   /*z-index: 10000;*/
   /*box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.2);*/
 }
-
 #potato {
   width: 15%;
   float: left;
 }
-
 .navImg {
   width: 5vw;
   margin-left: 10%;
@@ -52,11 +45,9 @@ header {
 #tabs {
   text-align: center;
 }
-
 .highlighted {
   color: #713a16;
 }
-
 .tab {
   display: inline-block;
   font-size: 40px;
@@ -66,18 +57,12 @@ header {
   transition: .25s;
   cursor: pointer;
 }
-
 .tab:hover {
   /*color: white;*/
   /*background-color: #a8a8a8;*/
   transition: .25s;
   box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.2);
 }
-/**********************************
-Credit to Jesse Couch
-for this hamburger menu
-https://codepen.io/designcouch/
-***********************************/
 #hamburger {
   width: 60px;
   height: 45px;
@@ -97,7 +82,6 @@ https://codepen.io/designcouch/
   /*transition: .5s ease-in-out;*/
   cursor: pointer;
 }
-
 #hamburger span {
   display: block;
   position: absolute;
@@ -117,7 +101,6 @@ https://codepen.io/designcouch/
   -o-transition: .25s ease-in-out;
   /*transition: .25s ease-in-out;*/
 }
-
 #hamburger span:nth-child(1) {
   top: 0px;
   -webkit-transform-origin: left center;
@@ -125,7 +108,6 @@ https://codepen.io/designcouch/
   -o-transform-origin: left center;
   transform-origin: left center;
 }
-
 #hamburger span:nth-child(2) {
   top: 16px;
   -webkit-transform-origin: left center;
@@ -133,7 +115,6 @@ https://codepen.io/designcouch/
   -o-transform-origin: left center;
   transform-origin: left center;
 }
-
 #hamburger span:nth-child(3) {
   top: 32px;
   -webkit-transform-origin: left center;
@@ -141,7 +122,6 @@ https://codepen.io/designcouch/
   -o-transform-origin: left center;
   transform-origin: left center;
 }
-
 #hamburger.open span:nth-child(1) {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -150,12 +130,10 @@ https://codepen.io/designcouch/
   top: -3px;
   left: 8px;
 }
-
 #hamburger.open span:nth-child(2) {
   width: 0%;
   opacity: 0;
 }
-
 #hamburger.open span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
@@ -164,7 +142,6 @@ https://codepen.io/designcouch/
   top: 39px;
   left: 8px;
 }
-
 /****************************
           LANDING
 *****************************/
@@ -172,7 +149,6 @@ https://codepen.io/designcouch/
   text-align: center;
   visibility: hidden;
 }
-
 #welcome img {
   visibility: visible;
   max-width: 20%;
@@ -180,7 +156,6 @@ https://codepen.io/designcouch/
   display: inline-block;
   margin-bottom: -3.5%;
 }
-
 #clickTip {
   visibility: visible;
   position: absolute;
@@ -189,30 +164,25 @@ https://codepen.io/designcouch/
   /*right: 20%;*/
   z-index: 1000;
 }
-
 #welcomeName {
   font-size: 4.5vw;
   width: 60%;
   margin: auto;
 }
-
 #welcome {
   margin-top: 5%;
   font-size: 3.25vw;
   overflow: hidden;
 }
-
 #welcome p {
   font-size: 3vw;
 }
-
 #welcomeHi {
   margin-bottom: 0px;
   font-size: 7vw;
   width: 60%;
   margin: auto;
 }
-
 #welcomeName {
   margin: auto;
   margin-top: 0px;
@@ -220,16 +190,13 @@ https://codepen.io/designcouch/
   font-size: 4.5vw;
   width: 60%;
 }
-
 #iLike {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-
 footer {
   text-align: center;
 }
-
 #likes, #goods {
   text-align: center;
   width: 60%;
@@ -238,11 +205,9 @@ footer {
   overflow: hidden;
   font-size: 2vw;
 }
-
 #iLike {
   font-size: 3.25vw;
 }
-
 ul{
   margin-left: 200px;
   margin-right: 200px;
@@ -250,14 +215,12 @@ ul{
   border-right: 200px;
   overflow: hidden;
 }
-
 #rightArrow{
   width: 50px;
   position: absolute;
   left: 85%;
   top: 50%;
-}
-/**********************************
+}/**********************************
                LIFE
 ***********************************/
 #gameBoard {
@@ -270,10 +233,6 @@ ul{
   box-shadow: 20px -5px 10px 2px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
-
-/* offset-x | offset-y | blur-radius | spread-radius | color */
-/*box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);*/
-
 #lifeControls {
   position: absolute;
   left: 5px;
@@ -288,7 +247,6 @@ ul{
   border-radius: 10px;
   box-shadow: 1px -1px 10px 2px rgba(0, 0, 0, 0.2);
 }
-
 #lifeControls > * {
   margin-bottom: 2px;
   margin-top: 2px;
@@ -298,12 +256,10 @@ ul{
   padding-right: 10px;
   border-radius: 8px;
 }
-
 #lifeControls > *:hover {
   background-color: lightgrey;
   font-weight: bold;
 }
-
 #rate {
   width: 75px;
   height: 20px;
@@ -311,19 +267,16 @@ ul{
   border-bottom: 1px solid darkgrey;
   text-align: right;
 }
-
 #lifeInfo {
   position: absolute;
   top: 120px;
   left: 520px;
   margin-right: 6%;
 }
-
 #lifeInfo h4:first-child {
   margin-top: 0px;
   text-align: center;
 }
-
 #lifeArrow {
   width: 50px;
   position: absolute;
@@ -331,7 +284,6 @@ ul{
   right: 5px;
   cursor: pointer;
 }
-
 .cell {
   width: 10px;
   height: 10px;
@@ -339,47 +291,46 @@ ul{
   background-color: lightgrey;
   border: .1px solid rgb(41, 41, 41);
 }
-
 .row {
   display: flex;
   flex-direction: row;
 }
-
 .live {
   background-color: rgb(41,41,41);
 }
-
 .isAlive1 {
   background-color: rgb(41,41,41);
 }
-
 .isAlive0 {
   background-color: lightgrey;
 }
-
-
 /**********************************
               PROJECTS
 ***********************************/
+#projects {
+  margin: 0 2.5% 0 2.5%;
+}
 .projectContainer {
   width: 100%;
   height: 100%;
   display: flex;
   flex-flow: row;
   justify-content: space-between;
+  /*position: relative;*/
+}
+.reverseContainer {
+  flex-flow: row-reverse;
+}
+.spinners {
+  width: 40%;
+}
+.spinners {
   position: relative;
-  z-index: -1;
 }
-
-.leftSpinners {
-  margin-left: 5%;
-}
-
-.rightInfo {
+.info {
   flex-direction: wrap-reverse;
   width: 40%;
 }
-
 .projectTitle {
   font-size: 40px;
   text-align: center;
@@ -389,56 +340,49 @@ ul{
   width: 100%;
   margin-top: 10px;
 }
-
 #adsTitle {
   margin-top: 0px;
 }
-
-.rightBlurb {
+.blurb {
   width: 100%;
   font-size: 15px;
   color: rgb(128, 128, 128);
   background-color: rgb(34, 34, 34);
   border-radius: 7px;
-  padding: 5px 15px 5px 50px;
+  padding: 5px 25px 25px 25px;
   margin-top: 10px;
 }
-
-.rightSolution {
+.solution {
   width: 100%;
   font-size: 15px;
   color: rgb(128, 128, 128);
   background-color: rgb(34, 34, 34);
   border-radius: 7px;
-  padding: 5px 0px 5px 50px;
+  padding: 5px 25px 25px 25px;
   margin-top: 10px;
   /*flex-flow: row;*/
 }
-
-.rightTech {
+.tech {
   width: 100%;
   font-size: 15px;
   color: rgb(128, 128, 128);
   background-color: rgb(34, 34, 34);
   border-radius: 7px;
-  padding: 5px 15px 5px 50px;
+  padding: 5px 25px 25px 25px;
   margin-top: 10px;
 }
-
-.leftButtons {
+.buttons {
   width: 400px;
   text-align: center;
   color: #808080;
   position: absolute;
   bottom: 50px;
+  left: 50px;
 }
-
 .leftButtons img, .rightButtons img{
   width: 50px;
   padding-bottom: 15px;
 }
-
-
 #groupProjectBanner {
   display: flex;
   color: #808080;
@@ -446,7 +390,6 @@ ul{
   border-radius: 5px;
   justify-content: space-between;
 }
-
 #primeLogo  {
   display: flex;
   flex-direction: row;
@@ -454,228 +397,47 @@ ul{
   justify-content: flex-end;
   margin-right: 5%;
 }
-
 #primeLogo p {
   margin-bottom: 0px;
   padding-top: 10px;
 }
-
 #groupProjectBanner img {
   padding: 5px;
   width: 50px;
   height: 50px;
 }
-
-/*#groupProjectBanner p {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 14px;
-  padding-left: 5px;
-}*/
-
-/*#spotCheckTitle {
-  font-size: 40px;
-  text-align: center;
-  width: 90%;
-  background-color: rgb(34, 34, 34);
-  color: rgb(128, 128, 128);
-  border-radius: 7px;
-  margin-right: 15px;
-  position: absolute;
-  top: 1040px;
-  right: 50px;
-}*/
-
-#spotCheckBlurb {
-  width: 40%;
-  font-size: 15px;
-  color: rgb(128, 128, 128);
-  background-color: rgb(34, 34, 34);
-  border-radius: 7px;
-  padding: 5px 15px 5px 50px;
-  margin-right: 15px;
-  margin-left: 5%;
-  position: absolute;
-  top: 1110px;
-  /*left: 50px;*/
-}
-
-#spotCheckSolution {
-  width: 40%;
-  font-size: 15px;
-  color: rgb(128, 128, 128);
-  background-color: rgb(34, 34, 34);
-  border-radius: 7px;
-  padding: 5px 15px 5px 50px;
-  margin-right: 15px;
-  position: absolute;
-  margin-left: 5%;
-  top: 1355px;
-  /*left: 50px;*/
-}
-
-#spotCheckTech {
-  width: 40%;
-  font-size: 15px;
-  color: rgb(128, 128, 128);
-  background-color: rgb(34, 34, 34);
-  border-radius: 7px;
-  padding: 5px 15px 5px 50px;
-  margin-right: 15px;
-  position: absolute;
-  margin-left: 5%;
-  top: 1705px;
-  /*right: 50px;*/
-}
-
-#spotCheckButtons {
-  width: 400px;
-  text-align: center;
-  color: #808080;
-  position: absolute;
-  top: 1700px;
-  right: 100px;
-}
-
 #spotCheckButtons img{
   width: 50px;
   padding-bottom: 15px;
 }
-
-#lifeTitle {
-  font-size: 40px;
-  width: 90%;
-  text-align: center;
-  background-color: rgb(34, 34, 34);
-  color: rgb(128, 128, 128);
-  border-radius: 7px;
-  /*padding-left: 50px;*/
-  padding-right: 15px;
-  margin-left: 15px;
-  margin-right: 15px;
-  position: absolute;
-  top: 1915px;
-  right: 50px;
-}
-
-#lifeBlurb {
-  width: 40%;
-  font-size: 15px;
-  color: rgb(128, 128, 128);
-  background-color: rgb(34, 34, 34);
-  border-radius: 7px;
-  padding: 5px 15px 5px 50px;
-  /*padding-left: 50px;
-  padding-right: 15px;
-  padding-bottom: 5px;*/
-  margin-right: 15px;
-  position: absolute;
-  top: 265px;
-  right: 50px;
-}
-
-#lifeSolution {
-  width: 40%;
-  font-size: 15px;
-  color: rgb(128, 128, 128);
-  background-color: rgb(34, 34, 34);
-  border-radius: 7px;
-  padding: 5px 15px 5px 50px;
-  margin-right: 15px;
-  position: absolute;
-  top: 550px;
-  right: 50px;
-}
-
-#lifeTech {
-  width: 40%;
-  font-size: 15px;
-  color: rgb(128, 128, 128);
-  background-color: rgb(34, 34, 34);
-  border-radius: 7px;
-  padding: 5px 15px 5px 50px;
-  margin-right: 15px;
-  position: absolute;
-  top: 795px;
-  right: 50px;
-}
-
-#lifeButtons {
-  width: 400px;
-  text-align: center;
-  color: #808080;
-  position: absolute;
-  top: 825px;
-  left: 100px;
-}
-
-#lifeButtons img{
-  width: 50px;
-  padding-bottom: 15px;
-}
-
-.otherProjectContainer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin-top: 0%;
-  margin-right: 0%;
-  height: 1500px;
-}
-
 /******************
-      IMAGES
+     SPINNERS
 *******************/
-
+/*CENTER IMAGE*/
 img.resize {
   max-width: 150%;
   max-height: 150%;
 }
-
 img.resizeB {
   max-width: 150%;
   max-height: 150%;
   transform: translate(-50px);
 }
-
 .square, .square div{
-  /*transform-origin: 50% 50%;*/
   overflow: hidden;
   width: 250px;
   height: 250px;
 }
-
-#adsSquare {
-  position: absolute;
-  top: 200px;
-  left: 150px;
-}
-
-#adsSvgContainer {
-  position: absolute;
-  top: 100px;
-  left: 50px;
-}
-
-#spotCheckSquare {
-  position: absolute;
-  top: 1250px;
-  right: 175px;
-}
-
-#spotCheckSvgContainer div {
-  top: 50%; left: 50%;
-}
-
 .square {
   animation: octoRotate 10s infinite;
   animation-delay: 0s;
   animation-timing-function: linear;
   transform: rotate(45deg);
   border-radius: 40px;
+  position: absolute;
+  top: 150px;
+  left: 120px;
 }
-
 .square1 {
   animation: octoRotateBack 10s infinite;
   animation-timing-function: linear;
@@ -683,30 +445,20 @@ img.resizeB {
   transform: rotate(-45deg);
   border-radius: 40px;
 }
-
-
-
-
-#adsSvgContainer div {
-  top: 50%; left: 50%;
-}
-
-#spotCheckSvgContainer {
-  top: 1150px;
-  right: 80px;
-}
-
-
-
+/*Outside Images*/
 .svgContainer {
+  position: absolute;
+  top: 50px;
+  left: 25px;
   width: 450px;
   height: 450px;
   animation: wheelSpin 60s infinite;
   animation-timing-function: linear;
 }
-
 .svgContainer div {
   position: absolute;
+  top: 50%;
+  left: 50%;
   display: block;
   width: 50px;
   height: 50px;
@@ -716,109 +468,83 @@ img.resizeB {
   width: 75px;
   height: 75px;
 }
-
 .svgContainer div.deg80 {
   width: 75px;
   height: 75px;
 }
-
 .svgContainer div.deg80B {
   width: 90px;
   height: 90px;
 }
-
 .svgContainer div.deg120, div.deg120B {
   width: 90px;
   height: 90px;
 }
-
 .svgContainer div.deg280 {
   width: 75px;
   height: 75px;
 }
-
 .svgContainer div.deg320 {
   width: 40px;
   height: 40px;
 }
-
-
-
-
 .svgContainer img {
   display: block;
   width: 100%;
   animation: itemSpin 60s infinite;
   animation-timing-function: linear;
 }
-
 .deg0 {
   transform: translate(200px);
 }
-
 .deg40 {
   transform: rotate(40deg) translate(200px) rotate(-40deg);
 }
-
 .deg80{
   transform: rotate(80deg) translate(200px) rotate(-80deg);
 }
-
 .deg80B {
   transform: rotate(80deg) translate(210px) rotate(-80deg);
 }
-
 .deg120 {
   transform: rotate(120deg) translate(200px) rotate(-120deg);
 }
-
 .deg120B {
   transform: rotate(120deg) translate(210px) rotate(-120deg);
 }
-
 .deg160 {
   transform: rotate(160deg) translate(200px) rotate(-160deg);
 }
-
 .deg200 {
   transform: rotate(200deg) translate(200px) rotate(-200deg);
 }
-
 .deg240 {
   transform: rotate(240deg) translate(200px) rotate(-240deg);
 }
-
 .deg280 {
   transform: rotate(280deg) translate(200px) rotate(-280deg);
 }
-
 .deg320 {
   transform: rotate(320deg) translate(210px) rotate(-320deg);
 }
-
 .deg320 img {
   width: 25;
   height: 25;
 }
-
 /******************
       Buttons
 *******************/
-
 .liveView {
   cursor: pointer;
   width: 190px;
   margin: auto;
 }
-
-
 iframe {
   width: 80%;
   margin: 0% 10% 10% 10%;
   height: 750px;
   max-height: 100%;
 }
-
 .projectArrow {
   width: 50px;
   /*transform: rotate(90deg);*/
@@ -826,14 +552,12 @@ iframe {
   left: 25vw;
   top: 50px;
 }
-
 .arrow {
   width: 50px;
   transform: rotate(90deg);
   position: absolute;
   z-index: 11;
 }
-
 .backArrow {
   width: 50px;
   transform: rotate(180deg);
@@ -842,7 +566,6 @@ iframe {
   top: 50%;
   cursor: pointer;
 }
-
 /**************
 Loading Spinner
 ***************/
@@ -854,7 +577,6 @@ Loading Spinner
   -webkit-transform: rotateZ(45deg);
           transform: rotateZ(45deg);
 }
-
 .sk-folding-cube .sk-cube {
   float: left;
   width: 50%;
@@ -917,7 +639,6 @@ Loading Spinner
     opacity: 0;
   }
 }
-
 @keyframes sk-foldCubeAngle {
   0%, 10% {
     -webkit-transform: perspective(140px) rotateX(-180deg);
@@ -936,7 +657,6 @@ Loading Spinner
 /**********************************
              ANIMATIONS
 ***********************************/
-
 @keyframes viewOut {
   from {
     transform: rotateY(0deg);
@@ -945,7 +665,6 @@ Loading Spinner
     transform: rotateY(90deg);
   }
 }
-
 @keyframes viewIn {
   from {
     transform: rotateY(270deg);
@@ -954,7 +673,6 @@ Loading Spinner
     transform: rotateY(360deg);
   }
 }
-
 @keyframes potatoIn {
   0% {
     transform: scale(0);
@@ -969,7 +687,6 @@ Loading Spinner
     transform: scale(1);
   }
 }
-
 @keyframes expandDown {
   from {
     height: 500px;
@@ -978,7 +695,6 @@ Loading Spinner
     height: 2000px;
   }
 }
-
 @keyframes octoRotate {
   from {
     transform: rotate(-45deg);
@@ -987,7 +703,6 @@ Loading Spinner
     transform: rotate(-135deg);
   }
 }
-
 @keyframes octoRotateBack {
   from {
     transform: rotate(45deg);
@@ -996,7 +711,6 @@ Loading Spinner
     transform: rotate(135deg);
   }
 }
-
 @keyframes wheelSpin {
   from {
     transform: rotate(0deg);
@@ -1005,7 +719,6 @@ Loading Spinner
     transform: rotate(360deg);
   }
 }
-
 @keyframes itemSpin {
   from {
     transform: rotate(0deg);
@@ -1014,25 +727,20 @@ Loading Spinner
     transform: rotate(-360deg);
   }
 }
-
 .openProject {
   animation: expandDown 1.5s;
 }
-
 .rotate.ng-enter {
   animation: viewIn 1.5s both ease-in;
   animation-delay: 1s;
 }
-
 .navImg.ng-hide.ng-hide-animate {
   display: none !important;
 }
-
 .tab.ng-enter {
   animation: potatoIn 1s both ease-in;
   animation-delay: 1.5s;
 }
-
 .landingArrow.ng-enter {
   animation: potatoIn 1s both ease-in;
   animation-delay: 1s;
