@@ -18,7 +18,7 @@ var options = {
       "apiKey": 'c5c6dd1d-5509-4e6e-ad12-12b0357b5cf4',
       "n": 10,
       "min": 0,
-      "max": 2500,
+      "max": 900,
       "replacement": false
     },
     "id": 42

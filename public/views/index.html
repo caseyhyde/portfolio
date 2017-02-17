@@ -33,6 +33,7 @@
     <script src="/scripts/factories/nav-factory.js" type="text/javascript"></script>
     <!-- Dircetives -->
     <script src="/scripts/directives/scroll.directive.js" type="text/javascript"></script>
+    <script src="/scripts/directives/ng-onload.min.js" type="text/javascript"></script>
 
 
   </head>
@@ -40,7 +41,7 @@
     <header ng-controller="navController as nav">
       <nav ng-include="'/views/templates/nav.html'"></nav>
     </header>
-    <main id="main" class="rotate" ng-view></main>
+    <main id="main" class="rotate" ng-view ng-class="{'no-animation' : life.location == '/landing'}"></main>
     <footer ng-if="nav.show">&copy;Casey Hyde | 2017</footer>
   </body>
 </html>

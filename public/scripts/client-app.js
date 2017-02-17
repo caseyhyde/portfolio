@@ -1,13 +1,14 @@
-var app = angular.module('portfolioApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap']);
+var app = angular.module('portfolioApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'ngOnload']);
 
 app.config(['$routeProvider',
-'$locationProvider', function($routeProvider, $locationProvider) {
+'$locationProvider', '$animateProvider', function($routeProvider, $locationProvider, $animateProvider) {
   $locationProvider.hashPrefix('');
   $routeProvider
     .when('/landing', {
       templateUrl: '/views/templates/landing.html',
       controller: 'landingController',
-      controllerAs: 'landing'
+      controllerAs: 'landing',
+      animation: 'none'
     })
     .when('/life', {
       templateUrl: '/views/templates/life.html'
@@ -34,5 +35,7 @@ app.config(['$routeProvider',
     })
     .otherwise({
       redirectTo: '/landing'
-    })
+    });
+  // $animateProvider.classNameFilter(/ng-animate-enabled/);
+
 }]);//End router

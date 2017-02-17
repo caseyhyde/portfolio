@@ -3,7 +3,7 @@ app.controller('navController', ['NavFactory', '$rootScope', '$location', functi
 
   const self = this;
 
-  self.show = true;
+  self.show = false;
   self.highlighted = "";
 
   $rootScope.$on('$routeChangeSuccess', function(next, last) {

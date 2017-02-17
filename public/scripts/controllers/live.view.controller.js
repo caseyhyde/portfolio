@@ -5,6 +5,12 @@ app.controller('LiveViewController', ['$scope', '$location', function($scope, $l
 
   self.loading = true;
 
+  self.loadingFn = function() {
+    console.log("loaded");
+    self.loading = false;
+    $scope.$apply();
+  };
+
   // $scope.$on('$viewContentLoaded', function() {
   //   console.log("iFrame Loaded!");
   //   self.loading = false;

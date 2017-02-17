@@ -69,9 +69,8 @@ header {
   /*float: right;*/
   position: absolute;
   z-index: 2;
-  right: 2%;
-  margin-top: 15px;
-  margin-right: 2%;
+  top: 10px;
+  right: 10px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -81,7 +80,6 @@ header {
   -o-transition: .5s ease-in-out;
   /*transition: .5s ease-in-out;*/
   cursor: pointer;
-  pointer-events: auto;
 }
 #hamburger span {
   display: block;
@@ -309,7 +307,7 @@ ul{
               PROJECTS
 ***********************************/
 #projects {
-  margin: 0 2.5% 0 2.5%;
+  margin: 0 5% 0 5%;
 }
 .projectContainer {
   width: 100%;
@@ -328,15 +326,12 @@ ul{
   width: 40%;
   position: relative;
 }
-.leftSpinners {
-  margin-left: 5%;
-}
-.rightSpinners {
-  margin-right: 5%;
-}
 .info {
   flex-direction: wrap-reverse;
   width: 40%;
+}
+.info p {
+  font-size: 18px;
 }
 .projectTitle {
   font-size: 40px;
@@ -603,7 +598,7 @@ Loading Spinner
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #333;
+  background-color: #07aa9e;
   -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
           animation: sk-foldCubeAngle 2.4s infinite linear both;
   -webkit-transform-origin: 100% 100%;
@@ -741,8 +736,11 @@ Loading Spinner
   animation: expandDown 1.5s;
 }
 .rotate.ng-enter {
-  animation: viewIn 1.5s both ease-in;
-  animation-delay: 1s;
+  animation: viewIn .5s both ease-in;
+  animation-delay: .5s;
+}
+.rotate.ng-leave{
+  animation: viewOut .5s both ease-in;
 }
 .navImg.ng-hide.ng-hide-animate {
   display: none !important;
@@ -752,6 +750,12 @@ Loading Spinner
   animation-delay: 1.5s;
 }
 .landingArrow.ng-enter {
-  animation: potatoIn 1s both ease-in;
-  animation-delay: 1s;
+  animation: potatoIn .5s both linear;
+  animation-delay: 0s;
+}
+.no-animation.ng-enter {
+  animation: none !important;
+}
+.no-animation.ng-leave {
+  animation: viewOut .5s both ease-in;
 }

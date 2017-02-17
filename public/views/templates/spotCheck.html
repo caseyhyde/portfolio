@@ -1,4 +1,10 @@
 <div>
   <img class="backArrow" src="/assets/right-arrow.svg" alt="back" ng-click="liveView.back()">
 </div>
-<iframe src="https://serene-dusk-10274.herokuapp.com/#/search"></iframe>
+<div class="sk-folding-cube" ng-if=liveView.loading>
+  <div class="sk-cube1 sk-cube"></div>
+  <div class="sk-cube2 sk-cube"></div>
+  <div class="sk-cube4 sk-cube"></div>
+  <div class="sk-cube3 sk-cube"></div>
+</div>
+<iframe src="https://serene-dusk-10274.herokuapp.com/#/search" ng-onload="liveView.loadingFn()" ng-hide="liveView.loading"></iframe>
