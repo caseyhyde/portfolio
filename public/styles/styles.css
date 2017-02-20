@@ -233,7 +233,7 @@ nav {
   width: 50px;
   position: fixed;
   top: 50%;
-  right: 5px;
+  right: 50px;
   cursor: pointer;
 }
 #instructions {
@@ -344,6 +344,9 @@ nav {
   left: 50px;
   z-index: 2000;
 }
+.rightSpinners {
+  margin-right: 5%;
+}
 .leftButtons img, .rightButtons img{
   width: 50px;
   padding-bottom: 15px;
@@ -383,7 +386,7 @@ img.resize {
   max-width: 150%;
   max-height: 150%;
 }
-img.resizeB {
+img.resizeB, #conway {
   max-width: 150%;
   max-height: 150%;
   transform: translate(-50px);
@@ -467,13 +470,16 @@ img.resizeB {
 .deg40 {
   transform: rotate(40deg) translate(200px) rotate(-40deg);
 }
+.deg60 {
+  transform: rotate(60deg) translate(200px) rotate(-60deg);
+}
 .deg80{
   transform: rotate(80deg) translate(200px) rotate(-80deg);
 }
 .deg80B {
   transform: rotate(80deg) translate(210px) rotate(-80deg);
 }
-.deg120 {
+.deg120, .deg120C {
   transform: rotate(120deg) translate(200px) rotate(-120deg);
 }
 .deg120B {
@@ -481,6 +487,9 @@ img.resizeB {
 }
 .deg160 {
   transform: rotate(160deg) translate(200px) rotate(-160deg);
+}
+.deg180 {
+  transform: rotate(180deg) translate(200px) rotate(-180deg);
 }
 .deg200 {
   transform: rotate(200deg) translate(200px) rotate(-200deg);
@@ -490,6 +499,9 @@ img.resizeB {
 }
 .deg280 {
   transform: rotate(280deg) translate(200px) rotate(-280deg);
+}
+.deg300 {
+  transform: rotate(300deg) translate(210px) rotate(-300deg);
 }
 .deg320 {
   transform: rotate(320deg) translate(210px) rotate(-320deg);
@@ -538,6 +550,7 @@ Loading Spinner
 ***************/
 .sk-folding-cube {
   margin: 20px auto;
+  margin-top: 20%;
   width: 40px;
   height: 40px;
   position: relative;
