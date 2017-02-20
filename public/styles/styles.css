@@ -231,8 +231,8 @@ nav {
 }
 #lifeArrow {
   width: 50px;
-  position: absolute;
-  top: 45%;
+  position: fixed;
+  top: 50%;
   right: 5px;
   cursor: pointer;
 }
@@ -648,7 +648,7 @@ Loading Spinner
     transform: scale(.5);
   }
   90% {
-    transform: scale(1.4);
+    transform: scale(1.1);
   }
   100% {
     transform: scale(1);
@@ -708,8 +708,8 @@ Loading Spinner
   display: none !important;
 }
 .tab.ng-enter {
-  animation: potatoIn 1s both ease-in;
-  animation-delay: 1.5s;
+  animation: potatoIn .5s both linear;
+  animation-delay: 0.5s;
 }
 .landingArrow.ng-enter {
   animation: potatoIn .5s both linear;
