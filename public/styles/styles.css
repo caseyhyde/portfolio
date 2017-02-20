@@ -10,7 +10,7 @@ body {
 }
 #main {
   height: 100%;
-  margin-top: 120px;
+  margin-top: 75px;
 }
 a {
   text-decoration: none;
@@ -20,46 +20,37 @@ a:hover {
   text-decoration: none;
   color: inherit;
 }
+footer {
+  text-align: center;
+}
 /****************************
             NAV
 *****************************/
 header {
-  /*position: absolute;*/
   width: 100%;
   position: fixed;
   top: 0%;
-  /*padding-top: 20px;*/
-  /*background-color: rgb(96, 45, 45);*/
   color: rgb(128, 128, 128);
-  /*z-index: 10000;*/
-  /*box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.2);*/
 }
-#potato {
-  width: 15%;
-  float: left;
-}
-.navImg {
-  width: 5vw;
-  margin-left: 10%;
+nav {
+  width: 100%;
 }
 #tabs {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .highlighted {
   color: #713a16;
 }
 .tab {
-  display: inline-block;
   font-size: 40px;
-  margin-right: 9%;
   padding: 10px;
   border-radius: 9px;
   transition: .25s;
   cursor: pointer;
 }
 .tab:hover {
-  /*color: white;*/
-  /*background-color: #a8a8a8;*/
   transition: .25s;
   box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.2);
 }
@@ -144,107 +135,79 @@ header {
 /****************************
           LANDING
 *****************************/
-#welcome, #hi {
-  text-align: center;
-  visibility: hidden;
-}
-#welcome img {
-  visibility: visible;
-  max-width: 20%;
-  max-height: 20%;
-  display: inline-block;
-  margin-bottom: -3.5%;
-}
-#clickTip {
-  visibility: visible;
-  position: absolute;
-  right: 30%;
-  top: 40%;
-  /*right: 20%;*/
-  z-index: 1000;
-}
-#welcomeName {
-  font-size: 4.5vw;
-  width: 60%;
-  margin: auto;
-}
 #welcome {
-  margin-top: 5%;
-  font-size: 3.25vw;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   overflow: hidden;
-}
-#welcome p {
-  font-size: 3vw;
+  visibility: hidden;
+  padding: 0px;
 }
 #welcomeHi {
+  font-size: 125px;
   margin-bottom: 0px;
-  font-size: 7vw;
-  width: 60%;
-  margin: auto;
+  padding-bottom: 0px;
 }
 #welcomeName {
+  margin-top: 0px;
+  padding-top: 0px;
+  font-size: 75px;
+  width: 80%;
   margin: auto;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  font-size: 4.5vw;
-  width: 60%;
 }
-#iLike {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-footer {
+#goods {
   text-align: center;
-}
-#likes, #goods {
-  text-align: center;
-  width: 60%;
-  height: 300px;
+  width: 70%;
+  /*height: 300px;*/
   margin: auto;
   overflow: hidden;
-  font-size: 2vw;
+  font-size: 25px;
 }
-#iLike {
-  font-size: 3.25vw;
-}
-ul{
-  margin-left: 200px;
-  margin-right: 200px;
-  border-left: 200px;
-  border-right: 200px;
-  overflow: hidden;
+#iGood {
+  font-size: 50px;
 }
 #rightArrow{
   width: 50px;
   position: absolute;
-  left: 85%;
+  right: 50px;
   top: 50%;
 }/**********************************
                LIFE
 ***********************************/
-#gameBoard {
-  /*width: 100%;*/
-  position: absolute;
-  z-index: 5;
-  margin-left: 20px;
-  float: left;
-  top: 150px;
-  box-shadow: 20px -5px 10px 2px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-}
-#lifeControls {
-  position: absolute;
-  left: 5px;
-  width: 500px;
-  top: 120px;
+#gameContainer {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#gameMessage {
+  font-size: 25px;
+  line-height: 25px;
+  color: rgb(128, 128, 128);
+  display: flex;
+  justify-content: center;
+}
+#gameBoard {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+#lifeInfo {
+  width: 60%;
+}
+#lifeInfo {
+  text-align: center;
+}
+#lifeControls {
+  flex-direction: row-reverse;
   flex-wrap: wrap;
   justify-content: space-around;
-  /*height: 25px;*/
   border: 1px solid darkgrey;
   border-radius: 10px;
-  box-shadow: 1px -1px 10px 2px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin: auto;
 }
 #lifeControls > * {
   margin-bottom: 2px;
@@ -266,16 +229,6 @@ ul{
   border-bottom: 1px solid darkgrey;
   text-align: right;
 }
-#lifeInfo {
-  position: absolute;
-  top: 120px;
-  left: 520px;
-  margin-right: 6%;
-}
-#lifeInfo h4:first-child {
-  margin-top: 0px;
-  text-align: center;
-}
 #lifeArrow {
   width: 50px;
   position: absolute;
@@ -283,25 +236,34 @@ ul{
   right: 5px;
   cursor: pointer;
 }
+#instructions {
+  position: fixed;
+  bottom: 0px;
+  right: 50px;
+  font-size: 30px;
+}
 .cell {
-  width: 10px;
-  height: 10px;
-  /*height: 5px;*/
-  background-color: lightgrey;
-  border: .1px solid rgb(41, 41, 41);
+  width: 18px;
+  height: 18px;
+  background-color: rgb(191, 191, 191);
+  border: 1px solid #07aa9e;
+  border-radius: 9px;
 }
 .row {
+  /*margin-left: 0px;
+  margin-right: 0px;*/
+  margin: 0;
   display: flex;
   flex-direction: row;
 }
 .live {
-  background-color: rgb(41,41,41);
+  background-color: #07aa9e;
 }
 .isAlive1 {
-  background-color: rgb(41,41,41);
+  background-color: #07aa9e;
 }
 .isAlive0 {
-  background-color: lightgrey;
+  background-color: rgb(41,41,41);
 }
 /**********************************
               PROJECTS

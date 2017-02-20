@@ -1,38 +1,43 @@
-<div id="lifeControls">
-  <span ng-click="life.start()">START</span>
-  <span ng-click="life.next()">NEXT</span>
-  <span ng-click="life.pause()">PAUSE</span>
-  <span ng-click="life.reset()">RESET</span>
-  <span ng-click="life.methuselahRain()">METHUSELAH RAIN: <span ng-if="life.rain">ON</span><span ng-if="!life.rain">OFF</span></span>
-  <label for="rate">RATE:</label>
-  <input id="rate" ng-model="life.rate"/>
-  <!-- <label for="rate">Game rate in ms</label>
-  <input name="rate" id="rate" ng-model="life.rate"/> -->
-</div>
-<div id="gameBoard">
-  <div class="row" ng-repeat="row in life.currentGrid">
-    <div class="cell isAlive{{cell}}" ng-repeat="cell in row track by $index" ng-click="life.toggleCell($parent.$index, $index)"></div>
+<div id="gameContainer">
+  <div id="game">
+    <div id="gameMessage">
+      <span>Enter Starting Population</span>
+    </div>
+    <div id="gameBoard">
+      <div class="row" ng-repeat="row in life.currentGrid">
+        <div class="cell isAlive{{cell}}" ng-repeat="cell in row track by $index" ng-click="life.toggleCell($parent.$index, $index)"></div>
+      </div>
+    </div>
+    <div id="lifeControls">
+      <span ng-click="life.start()">START</span>
+      <span ng-click="life.next()">NEXT</span>
+      <span ng-click="life.pause()">PAUSE</span>
+      <span ng-click="life.reset()">RESET</span>
+      <span ng-click="life.methuselahRain()">METHUSELAH RAIN: <span ng-if="life.rain">ON</span><span ng-if="!life.rain">OFF</span></span>
+      <label for="rate">RATE:</label>
+      <input id="rate" ng-model="life.rate"/>
+    </div>
+    <div scroll id="instructions">
+      <span ng-if="!boolChangeClass">Instructions &#9660;</span>
+    </div>
   </div>
-</div>
-<div id="bottomLifeControls">
-
-</div>
-<div id="lifeInfo">
-  <h4>It's Alive!</h4>
-  <h5>This website runs Conway's Game of life in the background... Because, why not?</h5>
-  <h5>The game is what's known as a zero player game, in that after initial set up, no input from the user is necessary. It plays itself!</h5>
-  <h4>How it works:</h4>
-  <h5>Each cycle(generation), your computer checks each cell on the grid and applies the following rules:</h5>
-  <h5>1) Any live cell with fewer than two live neighbours dies (referred to as underpopulation or exposure).</h5>
-  <h5>2) Any live cell with more than three live neighbours dies (referred to as overpopulation or overcrowding).</h5>
-  <h5>3) Any live cell with two or three live neighbours lives, unchanged, to the next generation.</h5>
-  <h5>4) Any dead cell with exactly three live neighbours will come to life.</h5>
-  <h4>What you do:</h4>
-  <h5>Click on cells on the grid to the left to turn them on and input your initial population.</h5>
-  <h5>You should turn on Methuselah Rain, as this randomly drops highly active shapes onto your grid every 30 generations, keeping your population moving.</h5>
-  <h5>Hit start to begin the game. You can pause if you'd like, and when paused you can step through each generation by hitting the next button.</h5>
-  <h5>Reset clears the board.</h5>
-  <h5>The RATE field is the number of milliseconds between generations. The AngularJS that is running this game can't update the page much faster than every 250ms, but your computer can do it in the background when you're not looking at it much faster.</h5>
-  <h5>Once you've clicked start, watch for as long as you'd like then click the arrow to proceed to the rest of the site.</h5>
+  <div id="lifeInfo">
+    <h4>It's Alive!</h4>
+    <h5>This website runs Conway's Game of life in the background... Because, why not?</h5>
+    <h5>The game is what's known as a zero player game, in that after initial set up, no input from the user is necessary. It plays itself!</h5>
+    <h4>How it works:</h4>
+    <h5>Each cycle(generation), your computer checks each cell on the grid and applies the following rules:</h5>
+    <h5>1) Any live cell with fewer than two live neighbours dies (referred to as underpopulation or exposure).</h5>
+    <h5>2) Any live cell with more than three live neighbours dies (referred to as overpopulation or overcrowding).</h5>
+    <h5>3) Any live cell with two or three live neighbours lives, unchanged, to the next generation.</h5>
+    <h5>4) Any dead cell with exactly three live neighbours will come to life.</h5>
+    <h4>What you do:</h4>
+    <h5>Click on cells on the grid to the left to turn them on and input your initial population.</h5>
+    <h5>You should turn on Methuselah Rain, as this randomly drops highly active shapes onto your grid every 30 generations, keeping your population moving.</h5>
+    <h5>Hit start to begin the game. You can pause if you'd like, and when paused you can step through each generation by hitting the next button.</h5>
+    <h5>Reset clears the board.</h5>
+    <h5>The RATE field is the number of milliseconds between generations. The AngularJS that is running this game can't update the page much faster than every 150ms, but your computer can do it in the background when you're not looking at it much faster.</h5>
+    <h5>Once you've clicked start, watch for as long as you'd like then click the arrow to proceed to the rest of the site.</h5>
+  </div>
 </div>
 <img id="lifeArrow" src="/assets/right-arrow.svg" ng-click="life.continue()"/>
