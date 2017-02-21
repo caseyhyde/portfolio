@@ -6,11 +6,15 @@ app.controller('navController', ['NavFactory', '$rootScope', '$location', functi
   self.show = false;
   self.highlighted = "";
 
-  // $rootScope.$on('$routeChangeSuccess', function(next, last) {
-  //   self.show = NavFactory.show;
-  //   self.highlighted = NavFactory.highlight;
-  //   console.log("route change detected", self.highlighted);
-  // });
+  $rootScope.$on('$routeChangeSuccess', function(next, last) {
+    if($location.path() != '/landing') {
+      self.show = true;
+    } else {
+      self.show = false;
+    }
+    self.highlighted = NavFactory.highlight;
+    console.log("route change detected", self.highlighted);
+  });
 
   self.toggleHamburger = function() {
     self.hamburgerOpen = !self.hamburgerOpen;

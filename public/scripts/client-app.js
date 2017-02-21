@@ -18,6 +18,11 @@ app.config(['$routeProvider',
       controller: 'ProjectsController',
       controllerAs: 'projects'
     })
+    .when('/resume', {
+      templateUrl: '/views/templates/resume.html',
+      controller: 'ResumeController',
+      controllerAs: 'resume'
+    })
     .when('/ads', {
       templateUrl: '/views/templates/ads.html',
       controller: 'LiveViewController',
