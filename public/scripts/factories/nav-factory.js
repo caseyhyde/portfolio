@@ -8,7 +8,7 @@ app.factory('NavFactory', ['$location', function($location) {
     }
   };
 
-  if($location.path() != '/landing') {
+  if($location.path() !== '/landing') {
     api.show = true;
   };
 
