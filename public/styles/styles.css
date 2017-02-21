@@ -378,6 +378,32 @@ nav {
   width: 50px;
   padding-bottom: 15px;
 }
+#stuffContainer {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.thingContainer {
+  width: 300px;
+  height: 275px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 9px;
+  background-color: rgb(34, 34, 34);
+}
+.thingContainer > h1 {
+  font-size: 20px;
+}
+.thingContainer img {
+  width: 50px;
+  height: 50px;
+}
 /******************
      SPINNERS
 *******************/
