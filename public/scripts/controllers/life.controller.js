@@ -92,6 +92,20 @@ app.controller('lifeController', ['$location', '$http', '$timeout', '$scope', '$
   var currentDrop = 0;
 
   // var dropSpots = getRandoms();//this is now an array of 25 random integers between 0 and the # of cells in the grid
+  var testGrid = [];
+
+  function drawGame() {
+    var tempArray = [];
+    for(let i = 0; i < 30; i ++) {
+      tempArray.push(0);
+    }
+    for(let i = 0; i < 30; i ++) {
+      testGrid.push(tempArray);
+    }
+    console.log(testGrid);
+  }
+
+  drawGame();
 
   function getRandoms() {
     $http({
