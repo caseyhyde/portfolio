@@ -662,6 +662,86 @@ Loading Spinner
   }
 }
 /**********************************
+               RESUME
+***********************************/
+#resume {
+  color: rgb(128, 128, 128);
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  /*background-color: rgb(55, 55, 55);*/
+  border-radius: 9px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#resumeControls {
+  color: black;
+  /*border-radius: 9px;*/
+  /*padding: 10px;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+  /*background-color: rgba(0, 0, 0, 0.6);*/
+}
+#resumeControls span {
+  padding: 20px 40px;
+  margin: 10px;
+  font-size: 20px;
+  /*font-weight: bold;*/
+  background-color: rgba(7, 170, 158, 0.85);
+  border-radius: 9px;
+  /*border: 3px rgb(128, 128, 128) solid;*/
+}
+.last {
+  /*margin-right: 0px !important;*/
+}
+.stuck {
+  position: sticky;
+  top: 10px;
+}
+#resumeHeader {
+  /*text-align: center;*/
+  border-bottom: 3px dotted black;
+}
+#resumeHeader p {
+  font-size: 20px;
+}
+#resumeSkills {
+  border-bottom: 3px dotted black;
+}
+#resumeSkills h1 {
+  /*text-align: center;*/
+}
+#resumeSkills ul {
+  padding-left: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+}
+#resumeSkills li{
+  margin-right: 20px;
+  font-size: 20px;
+}
+#continuedLearning {
+  border-bottom: 3px dotted black;
+}
+#continuedLearning ul {
+  padding-left: 20px;
+}
+#continuedLearning li {
+  font-size: 18px;
+}
+#professionalExperience ul {
+  font-size: 18px;
+}
+.bold {
+  font-weight: bold;
+}
+/**********************************
              ANIMATIONS
 ***********************************/
 @keyframes viewOut {
