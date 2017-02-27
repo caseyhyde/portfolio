@@ -1,4 +1,4 @@
-var app = angular.module('portfolioApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'ngOnload']);
+var app = angular.module('portfolioApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'ngOnload', 'ngMaterial']);
 
 app.config(['$routeProvider',
 '$locationProvider', '$animateProvider', function($routeProvider, $locationProvider, $animateProvider) {

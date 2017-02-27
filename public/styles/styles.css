@@ -1,3 +1,13 @@
+/*ANGULAR MATERIAL OVERIDES*/
+md-button.red {
+  background-color: red;
+}
+html {
+  background-color: rgb(41, 41, 41) !important;
+}
+:focus {
+  outline: none;
+}
 #helloWorld {
   font-size: 200px;
 }
@@ -10,6 +20,7 @@ body {
   background-position: fixed;
 }
 #main {
+  background-color: rgb(41, 41, 41);
   height: 100%;
   margin-top: 75px;
 }
@@ -250,6 +261,9 @@ nav {
   border: 1px solid #07aa9e;
   border-radius: 9px;
 }
+.cell:focus {
+  outline: none;
+}
 .row {
   /*margin-left: 0px;
   margin-right: 0px;*/
@@ -348,9 +362,13 @@ nav {
 .rightSpinners {
   margin-right: 5%;
 }
-.leftButtons img, .rightButtons img{
-  width: 50px;
+.leftButtons img, .rightButtons img, .buttons img{
+  width: 40px;
   padding-bottom: 15px;
+}
+.buttons h3 {
+  margin: 0;
+  padding: 5px;
 }
 #groupProjectBanner {
   display: flex;
@@ -376,7 +394,7 @@ nav {
   height: 50px;
 }
 #spotCheckButtons img{
-  width: 50px;
+  width: 40px;
   padding-bottom: 15px;
 }
 #stuffContainer {
@@ -402,8 +420,12 @@ nav {
   font-size: 20px;
 }
 .thingContainer img {
-  width: 50px;
+  width: 40px;
   height: 50px;
+}
+.thingContainer h4 {
+  padding: 0;
+  margin: 0;
 }
 /******************
      SPINNERS
@@ -449,7 +471,6 @@ img.resizeB, #conway {
   height: 450px;
   animation: wheelSpin 60s infinite;
   animation-timing-function: linear;
-  z-index: -1;
 }
 .svgContainer div {
   position: absolute;
@@ -670,39 +691,29 @@ Loading Spinner
   margin: auto;
   display: flex;
   flex-direction: column;
-  /*background-color: rgb(55, 55, 55);*/
   border-radius: 9px;
   padding-left: 10px;
   padding-right: 10px;
+  cursor: default;
 }
 #resumeControls {
   color: black;
-  /*border-radius: 9px;*/
-  /*padding: 10px;*/
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   width: 100%;
-  /*background-color: rgba(0, 0, 0, 0.6);*/
 }
-#resumeControls span {
-  padding: 20px 40px;
-  margin: 10px;
-  font-size: 20px;
-  /*font-weight: bold;*/
-  background-color: rgba(7, 170, 158, 0.85);
-  border-radius: 9px;
-  /*border: 3px rgb(128, 128, 128) solid;*/
+.md-button.md-raised {
+  background-color: #07aa9e !important;
 }
-.last {
-  /*margin-right: 0px !important;*/
+.bold {
+  font-weight: bold;
 }
 .stuck {
   position: sticky;
   top: 10px;
 }
 #resumeHeader {
-  /*text-align: center;*/
   border-bottom: 3px dotted black;
 }
 #resumeHeader p {
@@ -710,9 +721,6 @@ Loading Spinner
 }
 #resumeSkills {
   border-bottom: 3px dotted black;
-}
-#resumeSkills h1 {
-  /*text-align: center;*/
 }
 #resumeSkills ul {
   padding-left: 0;
@@ -735,11 +743,17 @@ Loading Spinner
 #continuedLearning li {
   font-size: 18px;
 }
+#professionalExperience {
+  border-bottom: 3px dotted black;
+}
 #professionalExperience ul {
   font-size: 18px;
 }
-.bold {
-  font-weight: bold;
+#emailModal {
+  width: 100%;
+  position: absolute;
+  top: 10px;
+  z-index: 1000;
 }
 /**********************************
              ANIMATIONS

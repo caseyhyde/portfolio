@@ -1,3 +1,8 @@
 app.controller('ResumeController', function() {
   console.log("Resume Controller running");
-})//End controller
+  const self = this;
+
+  self.showEmailModal = function() {
+    console.log("test");
+  };
+});//End controller

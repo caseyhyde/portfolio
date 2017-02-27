@@ -1,8 +1,8 @@
-<div scroll id="resume" ng-class="{'marginFix' : stick}">
+<div scroll id="resume" ng-class="{'marginFix' : stick}" ng-click="resume.close()">
   <div id="resumeControls" ng-class="{'stuck' : stick}">
-    <span><a href="/assets/resume_current.pdf" download>Download</a></span>
-    <span>Print</span>
-    <span class="last">Email</span>
+    <a href="/assets/resume_current.pdf" download><md-button class="md-raised">Download PDF</md-button></a>
+    <md-button class="md-raised" ng-click="resume.showEmailModal()">View/Print PDF</md-button>
+    <md-button class="last md-raised">Email PDF</md-button>
   </div>
   <div id="resumeHeader">
     <h1 class="bold">Casey Hyde</h1>
@@ -160,6 +160,35 @@
         <li>General cleaning and organizing of store (front and back).</li>
         <li>Think: retail grunt</li>
       </ul>
+    </div>
+    <div id="americanExteriors">
+      <h2 class="bold">American Exteriors</h2>
+      <h3>Door-to-Door Lead Generator</h3>
+      <h4>June 2012 - April 2013</h4>
+      <ul>
+        <li>Solicit leads for window and siding sales team.</li>
+        <li>Door-to-door marketing.</li>
+        <li>Daily sales pitch training.</li>
+        <li>Think: guy that ignored your “No soliciting” sign.</li>
+      </ul>
+    </div>
+  </div>
+  <div id="education">
+    <h1 class="bold">Education</h1>
+    <div id="primeEducation">
+      <h3 class="bold">Prime Digital Academy</h3>
+      <h4>Full Stack Software Engineering Certificate</h4>
+      <h5>January 2017</h5>
+    </div>
+    <div id="undEducation">
+      <h3 class="bold">Univeristy of North Dakota</h3>
+      <h4>Pursuit of B.A. in Electrical Engineering</h4>
+      <h5>2011 - 2012</h5>
+    </div>
+    <div id="techEducation">
+      <h3 class="bold">Minnesota State Southeast Technical College</h3>
+      <h4>General Education Credits to tranfer to UND</h4>
+      <h5>2009 - 2011</h5>
     </div>
   </div>
 </div>
