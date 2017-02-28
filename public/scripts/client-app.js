@@ -38,6 +38,16 @@ app.config(['$routeProvider',
       controller: 'LiveViewController',
       controllerAs: 'liveView'
     })
+    .when('/bio', {
+      templateUrl: '/views/templates/bio.html',
+      controller: 'BioController',
+      controllerAs: 'bio'
+    })
+    .when('/contact', {
+      templateUrl: '/views/templates/contact.html',
+      controller: 'ContactController',
+      controllerAs: 'contact'
+    })
     .otherwise({
       redirectTo: '/landing'
     });

@@ -9,13 +9,21 @@
       </div>
     </div>
     <div id="lifeControls">
-      <span ng-click="life.start()">START</span>
-      <span ng-click="life.next()">NEXT</span>
-      <span ng-click="life.pause()">PAUSE</span>
-      <span ng-click="life.reset()">RESET</span>
-      <span ng-click="life.methuselahRain()">METHUSELAH RAIN: <span ng-if="life.rain">ON</span><span ng-if="!life.rain">OFF</span></span>
-      <label for="rate">RATE:</label>
-      <input id="rate" ng-model="life.rate"/>
+      <md-button class="md-raised life-button" ng-click="life.start()" ng-class="{'wiggle': life.startWiggle}">START</md-button>
+      <md-button class="md-raised life-button" ng-click="life.next()" ng-class="{'wiggle': life.nextWiggle}">NEXT</md-button>
+      <md-button class="md-raised life-button" ng-click="life.pause()">PAUSE</md-button>
+      <md-button class="md-raised life-button" ng-click="life.reset()">RESET</md-button>
+      <md-button md-no-ink class="md-raised life-button" id="rateContainer">
+        <md-input-container class="rate-input">
+          <label class="rate-input">Rate</label>
+          <md-select ng-model="life.rate">
+            <md-option ng-repeat="ms in life.seconds" value="{{ms}}">
+              {{ms}}
+            </md-option>
+          </md-select>
+        </md-input-container>
+      </md-button>
+      <md-button class="md-raised life-button" ng-click="life.methuselahRain()" ng-class="{'wiggle': life.methuselahWiggle}">METHUSELAH RAIN: <span ng-if="life.rain">ON</span><span ng-if="!life.rain">OFF</span></span></md-button>
     </div>
     <div scroll id="instructions">
       <span ng-if="!boolChangeClass">Instructions &#9660;</span>
@@ -40,4 +48,9 @@
     <h5>Once you've clicked start, watch for as long as you'd like then click the arrow to proceed to the rest of the site.</h5>
   </div>
 </div>
-<img id="lifeArrow" src="/assets/right-arrow.svg" ng-click="life.continue()"/>
+<div id="lifeNav">
+  <img id="lifeArrow" src="/assets/right-arrow.svg" ng-click="life.continue()"/>
+  <div id="iDontGetIt">
+    <md-button class="md-raised life-button" ng-click="life.iDontGetIt()" ng-class="{'wiggle': life.wiggle}">I Don't Get It</md-button>
+  </div>
+</div>

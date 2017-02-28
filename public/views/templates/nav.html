@@ -10,17 +10,14 @@
   <div class="tab" ng-if="nav.show" ng-class="{ 'highlighted' : nav.highlighted === 'projects' }" ng-click="nav.redirect('projects')">
     <span>Projects</span>
   </div>
-  <div class="tab" ng-if="nav.show" ng-class="{ 'highlighted' : nav.highlighted === 'bio' }" ng-click="nav.redirect('landing')">
+  <div class="tab" ng-if="nav.show" ng-class="{ 'highlighted' : nav.highlighted === 'bio' }" ng-click="nav.redirect('bio')">
     <span>Bio</span>
   </div>
   <div class="tab" ng-if="nav.show" ng-class="{ 'highlighted' : nav.highlighted === 'resume' }" ng-click="nav.redirect('resume')">
     <span>Resume</span>
   </div>
-  <div class="tab" ng-if="nav.show" ng-class="{ 'highlighted' : nav.highlighted === 'contact' }" ng-click="nav.scroll()">
+  <div class="tab" ng-if="nav.show" ng-class="{ 'highlighted' : nav.highlighted === 'contact' }" ng-click="nav.redirect('contact')">
     <span>Contact</span>
-  </div>
-  <div class="tab" ng-if="nav.show" ng-class="{ 'highlighted' : nav.highlighted === 'contact' }" ng-click="nav.scroll()">
-    <span>Hack-Potato</span>
   </div>
 </div>
 

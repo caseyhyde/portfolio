@@ -1,13 +1,15 @@
-/*ANGULAR MATERIAL OVERIDES*/
-md-button.red {
-  background-color: red;
-}
+/***************************
+ ANGULAR MATERIAL OVERIDES
+****************************/
 html {
   background-color: rgb(41, 41, 41) !important;
 }
 :focus {
   outline: none;
 }
+/***************************
+          GENERAL
+****************************/
 #helloWorld {
   font-size: 200px;
 }
@@ -15,7 +17,7 @@ body {
   height: 100%;
   width: 100%;
   background-color: rgb(41, 41, 41);
-  color: rgb(191, 191, 191);
+  color: rgb(128, 128, 128);
   font-family: 'Poiret One', cursive;
   background-position: fixed;
 }
@@ -190,7 +192,7 @@ nav {
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
 }
 #gameMessage {
@@ -202,9 +204,9 @@ nav {
 }
 #gameBoard {
   width: 100%;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 #lifeInfo {
   width: 60%;
@@ -216,37 +218,29 @@ nav {
   flex-direction: row-reverse;
   flex-wrap: wrap;
   justify-content: space-around;
-  border: 1px solid darkgrey;
-  border-radius: 10px;
   width: 100%;
   margin: auto;
 }
-#lifeControls > * {
-  margin-bottom: 2px;
-  margin-top: 2px;
-  cursor: pointer;
-  font-weight: normal;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 8px;
+.life-button {
+  font-size: 12px;
 }
-#lifeControls > *:hover {
-  background-color: lightgrey;
-  font-weight: bold;
+.md-raised.life-button:hover {
+  background-color: #0e716a !important;
 }
-#rate {
-  width: 75px;
-  height: 20px;
-  border: none;
-  border-bottom: 1px solid darkgrey;
-  text-align: right;
+#rateContainer {
+  font-size: 12px;
+  height: 35px;
+}
+.rate-input {
+  margin-top: -5px;
 }
 #lifeArrow {
   width: 50px;
-  position: fixed;
+  /*position: fixed;
   top: 50%;
-  right: 50px;
+  right: 50px;*/
   cursor: pointer;
+  float: right;
 }
 #instructions {
   position: fixed;
@@ -260,16 +254,16 @@ nav {
   background-color: rgb(191, 191, 191);
   border: 1px solid #07aa9e;
   border-radius: 9px;
+  cursor: pointer;
 }
 .cell:focus {
   outline: none;
 }
 .row {
-  /*margin-left: 0px;
-  margin-right: 0px;*/
   margin: 0;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 .live {
   background-color: #07aa9e;
@@ -280,6 +274,16 @@ nav {
 .isAlive0 {
   background-color: rgb(41,41,41);
 }
+#lifeNav {
+  position: fixed;
+  top: 50%;
+  right: 50px;
+}
+/*#iDontGetIt {
+  position: fixed;
+  top: 50%;
+  left: 50px;
+}*/
 /**********************************
               PROJECTS
 ***********************************/
@@ -682,6 +686,31 @@ Loading Spinner
     opacity: 0;
   }
 }
+/********************
+       BIO
+*********************/
+#bio {
+  width: 80%;
+  margin: auto;
+}
+#frillyNonsense {
+  margin-top: 150px;
+  font-size: 20px;
+  text-indent: 2em;
+}
+#bio p > span {
+  font-weight: bold;
+  padding-left: 25px;
+}
+.sideBySide {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.sideBySide li {
+  font-size: 20px;
+}
 /**********************************
                RESUME
 ***********************************/
@@ -828,6 +857,26 @@ Loading Spinner
     transform: rotate(-360deg);
   }
 }
+@keyframes wiggle {
+  0% {
+    transform: rotate(3deg);
+  }
+  20% {
+    transform: rotate(-6deg);
+  }
+  40% {
+    transform: rotate(6deg);
+  }
+  60% {
+    transform: rotate(-6deg);
+  }
+  80% {
+    transform: rotate(6deg);
+  }
+  100% {
+    transform: rotate(-3deg)
+  }
+}
 .openProject {
   animation: expandDown 1.5s;
 }
@@ -854,4 +903,10 @@ Loading Spinner
 }
 .no-animation.ng-leave {
   animation: viewOut .5s both ease-in;
+}
+.wiggle-add {
+  animation: wiggle .75s both linear;
+}
+.wiggle-remove {
+  animation: wiggle .75s both linear;
 }
