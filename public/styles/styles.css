@@ -1,6 +1,12 @@
 /***************************
  ANGULAR MATERIAL OVERIDES
 ****************************/
+svg {
+
+}
+#testing {
+  /*transform: rotate(30deg);*/
+}
 html {
   background-color: rgb(41, 41, 41) !important;
 }
