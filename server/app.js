@@ -1,10 +1,13 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
-const randomApi = require('./routes/random');
+var randomApi = require('./routes/random');
+var mail = require('./routes/mail'); 
 const LOCALPORT = 3000;
 var portDecision = process.env.PORT || LOCALPORT;
+
 
 //Serve static files
 app.use(express.static('public'));

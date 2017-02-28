@@ -15,7 +15,7 @@ var options = {
     "jsonrpc": "2.0",
     "method": "generateIntegers",
     "params": {
-      "apiKey": 'c5c6dd1d-5509-4e6e-ad12-12b0357b5cf4',
+      "apiKey": process.env.RANDOM_ORG_API_KEY,
       "n": 10,
       "min": 0,
       "max": 899,
