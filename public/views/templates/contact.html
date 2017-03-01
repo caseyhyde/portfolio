@@ -41,8 +41,16 @@
               <md-card>
                 <md-card-content>
                   <md-input-container>
+                    <label>Your Name</label>
+                    <input ng-model="contact.name"/>
+                  </md-input-container>
+                </md-card-content>
+              </md-card>
+              <md-card>
+                <md-card-content>
+                  <md-input-container>
                     <label>Enter your message here</label>
-                    <textarea maxlength="150" rows="5"></textarea>
+                    <textarea maxlength="150" rows="5" ng-model="contact.textBody"></textarea>
                   </md-input-container>
                 </md-card-content>
               </md-card>

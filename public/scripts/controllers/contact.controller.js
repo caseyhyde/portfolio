@@ -32,8 +32,9 @@ app.controller('ContactController', ['$http', function($http) {
       method: 'POST',
       url: '/text',
       data: {
-        email: self.email,
-        body: self.emailBody
+        phone: self.phone,
+        body: self.textBody,
+        from: self.name
       }
     })
     .then(function(response) {

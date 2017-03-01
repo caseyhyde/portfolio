@@ -5,6 +5,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 var randomApi = require('./routes/random');
 var email = require('./routes/email');
+var text = require('./routes/text')
 const LOCALPORT = 3000;
 var portDecision = process.env.PORT || LOCALPORT;
 
@@ -19,6 +20,7 @@ app.get('/', function(req, res) {
 app.use(bodyParser.json());
 app.use('/random', randomApi);
 app.use('/email', email);
+app.use('/text', text);
 
 app.listen(portDecision, function() {
   console.log("Listening on port ", portDecision);
