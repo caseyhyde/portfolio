@@ -1,4 +1,4 @@
-app.controller('ContactController', ['$http', function($http) {
+app.controller('ContactController', ['$http', '$mdDialog', function($http, $mdDialog) {
   console.log("Contact Controller Running");
   var self = this;
 
@@ -7,23 +7,45 @@ app.controller('ContactController', ['$http', function($http) {
   self.phone = "";
   self.emailBody = "";
   self.textBody = "";
+  self.sent = false;
 
   self.sendEmail = function() {
     console.log("Send email clicked");
-    $http({
-      method: 'POST',
-      url: '/email',
-      data: {
-        email: self.email,
-        body: self.emailBody
-      }
-    })
-    .then(function(response) {
-      console.log("Send email response: ", response);
-    })
-    .catch(function(err) {
-      console.log("Send email error: ", err);
-    })
+    if(self.email !== "" && self. emailBody !== "") {
+      $http({
+        method: 'POST',
+        url: '/email',
+        data: {
+          email: self.email,
+          body: self.emailBody
+        }
+      })
+      .then(function(response) {
+        console.log("Send email response: ", response);
+        self.sent = true;
+        clearInputs();
+      })
+      .catch(function(err) {
+        console.log("Send email error: ", err);
+      })
+    }
+    else {
+        self.status = '  ';
+        self.customFullscreen = false;
+
+        self.showAlert = function(ev) {
+          $mdDialog.show(
+            $mdDialog.alert()
+            .parent(angular.element(document.querySelector('#popupContainer')))
+            .clickOutsideToClose(true)
+            .title('This is an alert title')
+            .textContent('You can specify some description text in here.')
+            .ariaLabel('Alert Dialog Demo')
+            .ok('Got it!')
+            .targetEvent(ev)
+        );
+      };
+    }
   }
 
   self.sendText = function() {
@@ -39,12 +61,19 @@ app.controller('ContactController', ['$http', function($http) {
     })
     .then(function(response) {
       console.log("Send email response: ", response);
+      self.sent = true;
+      clearInputs();
     })
     .catch(function(err) {
       console.log("Send email error: ", err);
     })
   }
-
+  function clearInputs() {
+    self.email = "";
+    self.phone = "";
+    self.emailBody = "";
+    self.textBody = "";
+  }
 }])//end controller
 .config(function($mdThemingProvider) {
   $mdThemingProvider.theme('dark-grey').backgroundPalette('grey').dark();

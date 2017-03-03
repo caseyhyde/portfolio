@@ -1,6 +1,6 @@
 <div id="contact">
 
-  <md-card md-theme="dark-grey" md-theme-watch>
+  <md-card md-theme="dark-grey" md-theme-watch ng-if="!contact.sent">
     <div ng-cloak>
         <md-tabs md-dynamic-height md-border-bottom>
           <md-tab id="emailTab" label="Email">
@@ -61,5 +61,13 @@
           </md-tab>
         </md-tabs>
     </div>
+  </md-card>
+  <md-card ng-if="contact.sent" md-theme="dark-grey" md-theme-watch>
+    <md-card-content>
+      <span>Awesome! We'll be in touch!</span>
+    </md-card-content>
+    <md-card-actions>
+      <md-button ng-click="contact.sent = false" class="md-raised">Send another message</md-button>
+    </md-card-actions>
   </md-card>
 </div>
