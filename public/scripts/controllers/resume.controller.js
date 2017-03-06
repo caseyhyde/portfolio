@@ -1,8 +1,28 @@
-app.controller('ResumeController', function() {
+app.controller('ResumeController', ['$http', '$mdDialog', function($http, $mdDialog) {
   console.log("Resume Controller running");
   const self = this;
 
   self.showEmailModal = function() {
     console.log("test");
   };
-});//End controller
+
+  self.email = '';
+
+  self.email = function(ev, index) {
+    console.log("Clicked");
+    $mdDialog.show({
+      templateUrl: '../views/templates/dialogs/emailResume.html',
+      controller: 'ResumeDialogController',
+      controllerAs: 'Dialog',
+      targetEvent: ev,
+      clickOutsideToClose: true
+    });
+    // $http({
+    //   method: 'POST',
+    //   url: '/email/resume',
+    //   data: {
+    //
+    //   }
+    // })
+  };
+}]);//End controller
