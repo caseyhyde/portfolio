@@ -5,12 +5,15 @@ const config = require('../config/aws-config');
 aws.config.update(config);
 var ses = new aws.SES({apiVersion: '2010-12-01'});
 const to = [process.env.TO_EMAIL];
-// const from = process.env.FROM_EMAIL;
+const from = process.env.FROM_EMAIL;
 
 
 router.post('/', function(req, res) {
-  var from = req.body.email;
-  console.log(from);
+  var emailBody = req.body.body;
+  var userEmail = req.body.email;
+  var message =
+    'Someone has reached out to you via your website. \n\nMessage:\n\n"' +
+    emailBody + '"\n\n' + "Reply to: " + userEmail;
   ses.sendEmail({
     Source: from,
     Destination: { ToAddresses: to },
@@ -20,7 +23,7 @@ router.post('/', function(req, res) {
       },
       Body: {
         Text: {
-          Data: req.body.body,
+          Data: message,
         }
       }
     }
