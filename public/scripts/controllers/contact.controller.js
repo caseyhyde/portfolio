@@ -75,10 +75,10 @@ app.controller('ContactController', ['$http', '$mdDialog', function($http, $mdDi
     self.emailBody = "";
     self.textBody = "";
   }
-}])//end controller
-.config(function($mdThemingProvider) {
-  $mdThemingProvider.theme('dark-grey').backgroundPalette('grey').dark();
-  $mdThemingProvider.theme('dark-orange').backgroundPalette('orange').dark();
-  $mdThemingProvider.theme('dark-purple').backgroundPalette('deep-purple').dark();
-  $mdThemingProvider.theme('dark-blue').backgroundPalette('blue').dark();
-});//end controller config
+}]);//end controller
+// .config(function($mdThemingProvider) {
+//   $mdThemingProvider.theme('dark-grey').backgroundPalette('grey').dark();
+//   $mdThemingProvider.theme('dark-orange').backgroundPalette('orange').dark();
+//   $mdThemingProvider.theme('dark-purple').backgroundPalette('deep-purple').dark();
+//   $mdThemingProvider.theme('dark-blue').backgroundPalette('blue').dark();
+// });//end controller config
