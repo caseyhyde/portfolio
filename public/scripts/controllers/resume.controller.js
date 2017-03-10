@@ -13,7 +13,7 @@ app.controller('ResumeController', ['$http', '$mdDialog', function($http, $mdDia
     $mdDialog.show({
       templateUrl: '../views/templates/dialogs/emailResume.html',
       controller: 'ResumeDialogController',
-      controllerAs: 'Dialog',
+      controllerAs: 'dialog',
       targetEvent: ev,
       clickOutsideToClose: true
     });
