@@ -3,11 +3,15 @@ app.controller('ResumeDialogController', ['$http', function($http) {
 
   var self = this;
 
-  // self.send = function() {
-  //   $http({
-  //     method: 'POST',
-  //     url: '/email/resume',
-  //     data: ''
-  //   })
-  // }
+  self.email = '';
+
+  self.send = function() {
+    $http({
+      method: 'POST',
+      url: '/email/resume',
+      data: {
+        email: self.email
+      }
+    })
+  }
 }]);//End controller
