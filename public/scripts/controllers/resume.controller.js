@@ -17,12 +17,5 @@ app.controller('ResumeController', ['$http', '$mdDialog', function($http, $mdDia
       targetEvent: ev,
       clickOutsideToClose: true
     });
-    // $http({
-    //   method: 'POST',
-    //   url: '/email/resume',
-    //   data: {
-    //
-    //   }
-    // })
   };
 }]);//End controller

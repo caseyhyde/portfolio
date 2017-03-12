@@ -1,22 +1,27 @@
-<md-dialog md-theme-watch md-theme="dark-grey">
-  <md-dialog-title>
-    <md-dialog-text>
+<md-card id="emailResumeCard" md-theme-watch md-theme="dark-grey" ng-hide="dialog.sent">
+  <md-card-title>
+    <md-card-text>
       <span class="md-headline">Email this resume</span>
-    </md-dialog-text>
-  </md-dialog-title>
-  <md-dialog-content>
+    </md-card-text>
+  </md-card-title>
+  <md-card-content>
     <md-input-container>
-      <label>Email to send resume to</label>
+      <label>Email Address</label>
       <input ng-model="dialog.toEmail"/>
     </md-input-container>
-  </md-dialog-content>
-  <md-dialog-content>
+  </md-card-content>
+  <md-card-content>
     <md-input-container>
       <label>Include a message</label>
-      <textarea rows="5" nd-model="dialog.message"></textarea>
+      <textarea rows="5" ng-model="dialog.message"></textarea>
     </md-input-container>
-  </md-dialog-content>
-  <md-dialog-actions>
+  </md-card-content>
+  <md-card-actions>
     <md-button class="md-raised md-primary" ng-click="dialog.send()">Send</md-button>
-  </md-dialog-actions>
+  </md-card-actions>
+</md-card>
+<md-card md-theme-watch md-theme="dark-grey" ng-show="dialog.sent">
+  <md-card-title>
+    <span class="md-headline">SENT!</span>
+  </md-card-title>
 </md-card>
