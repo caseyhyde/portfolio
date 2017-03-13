@@ -23,8 +23,9 @@ body {
   height: 100%;
   width: 100%;
   background-color: rgb(41, 41, 41);
-  color: rgb(128, 128, 128);
-  font-family: 'Poiret One', cursive;
+  color: rgb(194, 194, 194);
+  /*font-family: 'Poiret One', cursive;*/
+  font-family: 'Ubuntu', sans-serif;
   background-position: fixed;
 }
 #main {
@@ -798,7 +799,7 @@ Loading Spinner
   margin: auto;
 }
 #emailTab {
-  
+
 }
 
 /**********************************
